@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,27 +111,70 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3vC-V2-Dfr">
+                                <rect key="frame" x="16" y="149" width="382" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bQ4-Ts-Zes"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="6VI-YE-MLW">
+                                    <size key="itemSize" width="100" height="30"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tagsLabelCollectionCell" id="AID-Mq-vPN" customClass="TagsCollectionViewCell" customModule="Ramenology_uikit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4zd-5c-du0">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61C-WD-5pb">
+                                                    <rect key="frame" x="0.0" y="5" width="36" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="61C-WD-5pb" secondAttribute="trailing" constant="10" id="8nq-OE-gHD"/>
+                                                <constraint firstItem="61C-WD-5pb" firstAttribute="top" secondItem="4zd-5c-du0" secondAttribute="top" constant="5" id="cdU-lV-blP"/>
+                                                <constraint firstItem="61C-WD-5pb" firstAttribute="leading" secondItem="4zd-5c-du0" secondAttribute="leading" id="vvv-wN-X9M"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="tagLabelView" destination="61C-WD-5pb" id="jks-rS-SJk"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="A4s-3z-Mep" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="150" id="3Lc-9x-zT0"/>
+                            <constraint firstItem="3vC-V2-Dfr" firstAttribute="top" secondItem="2T2-Yu-fh8" secondAttribute="bottom" constant="5" id="7aA-1N-6jL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IsZ-dG-bgn" secondAttribute="trailing" constant="16" id="Ayy-gL-6jJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A4s-3z-Mep" secondAttribute="trailing" id="DLd-Fh-qGX"/>
                             <constraint firstItem="hMS-1k-ud5" firstAttribute="top" secondItem="IsZ-dG-bgn" secondAttribute="bottom" id="FrA-b9-FXi"/>
                             <constraint firstItem="A4s-3z-Mep" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HU9-Gu-FR7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3vC-V2-Dfr" secondAttribute="trailing" constant="16" id="HvR-5C-KUi"/>
                             <constraint firstItem="2T2-Yu-fh8" firstAttribute="top" secondItem="hMS-1k-ud5" secondAttribute="bottom" id="J5u-P9-dk0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hMS-1k-ud5" secondAttribute="trailing" constant="16" id="NIW-Aw-fVE"/>
                             <constraint firstItem="IsZ-dG-bgn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="NNx-fM-KxW"/>
                             <constraint firstItem="2T2-Yu-fh8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="QfQ-rG-eoQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IsZ-dG-bgn" secondAttribute="trailing" constant="16" id="oMA-SL-ucx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="A4s-3z-Mep" secondAttribute="bottom" constant="16" id="vvR-Gi-5ji"/>
+                            <constraint firstItem="3vC-V2-Dfr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="wBA-iR-Txf"/>
                             <constraint firstItem="hMS-1k-ud5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="yty-31-IqQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addButtonView" destination="IsZ-dG-bgn" id="M0j-TL-Wfe"/>
                         <outlet property="cardTableView" destination="A4s-3z-Mep" id="CdM-Fb-AvA"/>
+                        <outlet property="tagsCollectionView" destination="3vC-V2-Dfr" id="gyd-WL-zzE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

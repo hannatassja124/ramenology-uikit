@@ -7,39 +7,49 @@
 
 import UIKit
 
-class StartController: UIViewController {
+class StartController: UIViewController, cardProtocols, tagsProtocols {
     
     @IBOutlet weak var addButtonView: UIButton!
     @IBOutlet weak var cardTableView: UITableView!
+    @IBOutlet weak var tagsCollectionView: UICollectionView!
+    
+    var tags: [Tag] = []
     var cards: [Card] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cards = initCard()
+        initCard(tags: "")
+        initTag(selected: tag.all.rawValue)
         initAddButton()
         cardTableView.backgroundColor = .appWhite
         cardTableView.delegate = self
         cardTableView.dataSource = self
+        tagsCollectionView.delegate = self
+        tagsCollectionView.dataSource = self
+    }
+    
+    func initCard(tags: String) {
+        cards = getCard(tags: tags)
+        cardTableView.reloadData()
     }
     
     func initAddButton() {
         addButtonView.setTitleColor(.appRed, for: .normal)
     }
     
-    func initCard() -> [Card] {
-        var tempCard: [Card] = []
-        
-        let card0 = Card(image: #imageLiteral(resourceName: "image_2"), tags: "Noodle", name: "Test Noodle")
-        let card1 = Card(image: #imageLiteral(resourceName: "image_1"), tags: "Broth", name: "Test broth")
-        let card2 = Card(image: #imageLiteral(resourceName: "image_3"), tags: "Tare", name: "Test Tare")
-        
-        tempCard.append(card0)
-        tempCard.append(card1)
-        tempCard.append(card2)
-        
-        return tempCard
+    func initTag(selected: String){
+        tags = getTag(selected: selected)
+        tagsCollectionView.reloadData()
     }
 
+}
+
+protocol cardProtocols {
+    func initCard(tags: String)
+}
+
+protocol tagsProtocols {
+    func initTag(selected: String)
 }
 
 extension StartController: UITableViewDataSource, UITableViewDelegate {
@@ -53,6 +63,23 @@ extension StartController: UITableViewDataSource, UITableViewDelegate {
         
         cell.setCard(card: card)
         
+        return cell
+    }
+    
+    
+}
+
+extension StartController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tags.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let tag = tags[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tagsLabelCollectionCell", for: indexPath) as! TagsCollectionViewCell
+        cell.setTag(tag: tag)
+        cell.delegate_card = self
+        cell.delegate_tag = self
         return cell
     }
     

@@ -11,6 +11,8 @@
 		C6406C5726784AE5004CDD65 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C5626784AE5004CDD65 /* Card.swift */; };
 		C6406C5A2678596E004CDD65 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6406C592678596E004CDD65 /* Merriweather-Regular.ttf */; };
 		C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C5D267881DE004CDD65 /* UIColor+Style.swift */; };
+		C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */; };
+		C6406C662678F1ED004CDD65 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C652678F1ED004CDD65 /* Tag.swift */; };
 		C6F7D7C12676FA0300AF0DE2 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F7D7C02676FA0300AF0DE2 /* Start.storyboard */; };
 		C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7D7C42676FD9600AF0DE2 /* StartController.swift */; };
 		C6F7D7C82677131200AF0DE2 /* UIView+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7D7C72677131200AF0DE2 /* UIView+Extended.swift */; };
@@ -28,6 +30,8 @@
 		C6406C5626784AE5004CDD65 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C6406C592678596E004CDD65 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		C6406C5D267881DE004CDD65 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
+		C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6406C652678F1ED004CDD65 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		C6F7D7C02676FA0300AF0DE2 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		C6F7D7C42676FD9600AF0DE2 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		C6F7D7C72677131200AF0DE2 /* UIView+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extended.swift"; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			children = (
 				C6F7D7C02676FA0300AF0DE2 /* Start.storyboard */,
 				C638A6F4267848D2009386B0 /* CardViewCell.swift */,
+				C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				C6406C5626784AE5004CDD65 /* Card.swift */,
+				C6406C652678F1ED004CDD65 /* Tag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,10 +210,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECBEAD5C2676F45500144217 /* ViewController.swift in Sources */,
+				C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */,
 				C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */,
 				ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */,
 				C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */,
 				ECBEAD5A2676F45500144217 /* SceneDelegate.swift in Sources */,
+				C6406C662678F1ED004CDD65 /* Tag.swift in Sources */,
 				ECBEAD622676F45500144217 /* Ramenology_uikit.xcdatamodeld in Sources */,
 				C6F7D7C82677131200AF0DE2 /* UIView+Extended.swift in Sources */,
 				C638A6F5267848D2009386B0 /* CardViewCell.swift in Sources */,
