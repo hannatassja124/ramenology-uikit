@@ -16,6 +16,11 @@ class AddRecipeController: UITableViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var cookingTimePicker: UIDatePicker!
     @IBOutlet weak var ingredientProcessTable: UITableView!
     
+    @IBOutlet weak var durationLabel: UILabel!
+    
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    
     var categories: [String] = []
     var number:[Int] = Array(1...20)
     var process:[String] = []
@@ -36,6 +41,20 @@ class AddRecipeController: UITableViewController, UIPickerViewDelegate, UIPicker
 
     }
     
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
+    
+    func labelDuration (label : UILabel, duration : Int) {
+        let (h, m, _) = secondsToHoursMinutesSeconds(seconds: duration)
+        label.text = duration < 3600 ? "\(m) minutes" : "\(h) hours \(m) minutes"
+    }
+    
+    @IBAction func durationDP(_ sender: Any) {
+        labelDuration(label: durationLabel, duration: Int(cookingTimePicker.countDownDuration))
+    }
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -53,6 +72,16 @@ class AddRecipeController: UITableViewController, UIPickerViewDelegate, UIPicker
             return categories[row]
         } else {
             return "\(number[row])"
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 0 {
+            categoryLabel.text = categories[row]
+            print(categories[row])
+        } else {
+            totalLabel.text = "\(number[row]) servings"
+            print(number[row])
         }
     }
     

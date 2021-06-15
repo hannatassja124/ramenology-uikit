@@ -17,6 +17,7 @@
 		F9725D33267704880037DB1B /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9725D32267704880037DB1B /* AddRecipe.storyboard */; };
 		F9725D3526775D280037DB1B /* AddRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9725D3426775D280037DB1B /* AddRecipeController.swift */; };
 		F9725D37267798A90037DB1B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9725D36267798A90037DB1B /* AddViewController.swift */; };
+		F9B9F435267869CC00E89B61 /* UIView+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B9F434267869CC00E89B61 /* UIView+Extended.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F9725D32267704880037DB1B /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
 		F9725D3426775D280037DB1B /* AddRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddRecipeController.swift; path = "Ramenology-uikit/View/AddRecipeController.swift"; sourceTree = SOURCE_ROOT; };
 		F9725D36267798A90037DB1B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = "Ramenology-uikit/View/AddViewController.swift"; sourceTree = SOURCE_ROOT; };
+		F9B9F434267869CC00E89B61 /* UIView+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extended.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		ECBEAD562676F45500144217 /* Ramenology-uikit */ = {
 			isa = PBXGroup;
 			children = (
+				F9B9F4332678696D00E89B61 /* Extension */,
 				ECBEAD722676F47300144217 /* Controller */,
 				ECBEAD712676F46E00144217 /* View */,
 				ECBEAD6F2676F46700144217 /* Model */,
@@ -101,6 +104,14 @@
 				F9725D36267798A90037DB1B /* AddViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9B9F4332678696D00E89B61 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F9B9F434267869CC00E89B61 /* UIView+Extended.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B9F435267869CC00E89B61 /* UIView+Extended.swift in Sources */,
 				ECBEAD5C2676F45500144217 /* ViewController.swift in Sources */,
 				ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */,
 				F9725D37267798A90037DB1B /* AddViewController.swift in Sources */,
