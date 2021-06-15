@@ -14,6 +14,9 @@
 		ECBEAD622676F45500144217 /* Ramenology_uikit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD602676F45500144217 /* Ramenology_uikit.xcdatamodeld */; };
 		ECBEAD642676F45C00144217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD632676F45C00144217 /* Assets.xcassets */; };
 		ECBEAD672676F45C00144217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD652676F45C00144217 /* LaunchScreen.storyboard */; };
+		F9725D33267704880037DB1B /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9725D32267704880037DB1B /* AddRecipe.storyboard */; };
+		F9725D3526775D280037DB1B /* AddRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9725D3426775D280037DB1B /* AddRecipeController.swift */; };
+		F9725D37267798A90037DB1B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9725D36267798A90037DB1B /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		ECBEAD632676F45C00144217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBEAD662676F45C00144217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECBEAD682676F45C00144217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9725D32267704880037DB1B /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
+		F9725D3426775D280037DB1B /* AddRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddRecipeController.swift; path = "Ramenology-uikit/View/AddRecipeController.swift"; sourceTree = SOURCE_ROOT; };
+		F9725D36267798A90037DB1B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = "Ramenology-uikit/View/AddViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		ECBEAD712676F46E00144217 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F9725D32267704880037DB1B /* AddRecipe.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +97,8 @@
 		ECBEAD722676F47300144217 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F9725D3426775D280037DB1B /* AddRecipeController.swift */,
+				F9725D36267798A90037DB1B /* AddViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9725D33267704880037DB1B /* AddRecipe.storyboard in Resources */,
 				ECBEAD672676F45C00144217 /* LaunchScreen.storyboard in Resources */,
 				ECBEAD642676F45C00144217 /* Assets.xcassets in Resources */,
 				ECBEAD5F2676F45500144217 /* Main.storyboard in Resources */,
@@ -166,6 +176,8 @@
 			files = (
 				ECBEAD5C2676F45500144217 /* ViewController.swift in Sources */,
 				ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */,
+				F9725D37267798A90037DB1B /* AddViewController.swift in Sources */,
+				F9725D3526775D280037DB1B /* AddRecipeController.swift in Sources */,
 				ECBEAD5A2676F45500144217 /* SceneDelegate.swift in Sources */,
 				ECBEAD622676F45500144217 /* Ramenology_uikit.xcdatamodeld in Sources */,
 			);
