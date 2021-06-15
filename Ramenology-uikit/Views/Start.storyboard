@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="StartController" customModule="Ramenology_uikit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A4s-3z-Mep">
+                                <rect key="frame" x="0.0" y="194" width="414" height="652"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardViewCell" rowHeight="225" id="NuI-dM-vRY" customClass="CardViewCell" customModule="Ramenology_uikit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="225"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NuI-dM-vRY" id="w21-8W-Nec">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rfz-e5-QrW">
+                                                    <rect key="frame" x="16" y="16" width="382" height="209"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="327" id="UGL-Bz-ZSN"/>
+                                                        <constraint firstAttribute="height" constant="160" id="geT-9p-isz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go4-Yo-NxV">
+                                                    <rect key="frame" x="346" y="32" width="36" height="21"/>
+                                                    <color key="backgroundColor" red="0.73948758839999995" green="0.30776798729999999" blue="0.14503276349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9b-KG-QqQ">
+                                                    <rect key="frame" x="32" y="188" width="354" height="21"/>
+                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="KQG-v6-CB4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rfz-e5-QrW" firstAttribute="bottomMargin" secondItem="e9b-KG-QqQ" secondAttribute="bottom" constant="8" id="5DY-ap-1NI"/>
+                                                <constraint firstAttribute="trailing" secondItem="rfz-e5-QrW" secondAttribute="trailing" constant="16" id="7cr-rk-mK1"/>
+                                                <constraint firstItem="e9b-KG-QqQ" firstAttribute="leading" secondItem="rfz-e5-QrW" secondAttribute="leadingMargin" constant="8" id="DrG-2X-C06"/>
+                                                <constraint firstItem="rfz-e5-QrW" firstAttribute="trailingMargin" secondItem="go4-Yo-NxV" secondAttribute="trailing" constant="8" id="KD2-GI-gOs"/>
+                                                <constraint firstAttribute="bottom" secondItem="rfz-e5-QrW" secondAttribute="bottom" id="LcD-uR-n4F"/>
+                                                <constraint firstItem="go4-Yo-NxV" firstAttribute="top" secondItem="rfz-e5-QrW" secondAttribute="topMargin" constant="8" id="XIS-IO-QFg"/>
+                                                <constraint firstItem="rfz-e5-QrW" firstAttribute="trailingMargin" secondItem="e9b-KG-QqQ" secondAttribute="trailing" constant="4" id="mfZ-3B-6kb"/>
+                                                <constraint firstItem="rfz-e5-QrW" firstAttribute="leading" secondItem="w21-8W-Nec" secondAttribute="leading" constant="16" id="uoH-wO-Cbf"/>
+                                                <constraint firstItem="rfz-e5-QrW" firstAttribute="top" secondItem="w21-8W-Nec" secondAttribute="top" constant="16" id="zJl-jv-hDz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardImageView" destination="rfz-e5-QrW" id="Nmg-vD-jNn"/>
+                                            <outlet property="nameLabelView" destination="e9b-KG-QqQ" id="YNm-B1-tmn"/>
+                                            <outlet property="tagsLabelView" destination="go4-Yo-NxV" id="iEz-5r-fLt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2T2-Yu-fh8">
+                                <rect key="frame" x="16" y="123.5" width="287" height="20.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Start creating a perfect ramen for you">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsZ-dG-bgn">
+                                <rect key="frame" x="367" y="60" width="31" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMS-1k-ud5">
+                                <rect key="frame" x="16" y="93" width="382" height="30.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Improve your ramen">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Merriweather-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3vC-V2-Dfr">
+                                <rect key="frame" x="16" y="149" width="382" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bQ4-Ts-Zes"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="6VI-YE-MLW">
+                                    <size key="itemSize" width="100" height="30"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tagsLabelCollectionCell" id="AID-Mq-vPN" customClass="TagsCollectionViewCell" customModule="Ramenology_uikit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4zd-5c-du0">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61C-WD-5pb">
+                                                    <rect key="frame" x="0.0" y="5" width="36" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="61C-WD-5pb" secondAttribute="trailing" constant="10" id="8nq-OE-gHD"/>
+                                                <constraint firstItem="61C-WD-5pb" firstAttribute="top" secondItem="4zd-5c-du0" secondAttribute="top" constant="5" id="cdU-lV-blP"/>
+                                                <constraint firstItem="61C-WD-5pb" firstAttribute="leading" secondItem="4zd-5c-du0" secondAttribute="leading" id="vvv-wN-X9M"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="tagLabelView" destination="61C-WD-5pb" id="jks-rS-SJk"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A4s-3z-Mep" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="150" id="3Lc-9x-zT0"/>
+                            <constraint firstItem="3vC-V2-Dfr" firstAttribute="top" secondItem="2T2-Yu-fh8" secondAttribute="bottom" constant="5" id="7aA-1N-6jL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IsZ-dG-bgn" secondAttribute="trailing" constant="16" id="Ayy-gL-6jJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A4s-3z-Mep" secondAttribute="trailing" id="DLd-Fh-qGX"/>
+                            <constraint firstItem="hMS-1k-ud5" firstAttribute="top" secondItem="IsZ-dG-bgn" secondAttribute="bottom" id="FrA-b9-FXi"/>
+                            <constraint firstItem="A4s-3z-Mep" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HU9-Gu-FR7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3vC-V2-Dfr" secondAttribute="trailing" constant="16" id="HvR-5C-KUi"/>
+                            <constraint firstItem="2T2-Yu-fh8" firstAttribute="top" secondItem="hMS-1k-ud5" secondAttribute="bottom" id="J5u-P9-dk0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hMS-1k-ud5" secondAttribute="trailing" constant="16" id="NIW-Aw-fVE"/>
+                            <constraint firstItem="IsZ-dG-bgn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="NNx-fM-KxW"/>
+                            <constraint firstItem="2T2-Yu-fh8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="QfQ-rG-eoQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IsZ-dG-bgn" secondAttribute="trailing" constant="16" id="oMA-SL-ucx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="A4s-3z-Mep" secondAttribute="bottom" constant="16" id="vvR-Gi-5ji"/>
+                            <constraint firstItem="3vC-V2-Dfr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="wBA-iR-Txf"/>
+                            <constraint firstItem="hMS-1k-ud5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="yty-31-IqQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButtonView" destination="IsZ-dG-bgn" id="M0j-TL-Wfe"/>
+                        <outlet property="cardTableView" destination="A4s-3z-Mep" id="CdM-Fb-AvA"/>
+                        <outlet property="tagsCollectionView" destination="3vC-V2-Dfr" id="gyd-WL-zzE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
