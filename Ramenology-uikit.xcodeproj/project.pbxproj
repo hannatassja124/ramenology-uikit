@@ -13,7 +13,6 @@
 		C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C5D267881DE004CDD65 /* UIColor+Style.swift */; };
 		C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */; };
 		C6406C662678F1ED004CDD65 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C652678F1ED004CDD65 /* Tag.swift */; };
-		C6F7D7C12676FA0300AF0DE2 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F7D7C02676FA0300AF0DE2 /* Start.storyboard */; };
 		C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7D7C42676FD9600AF0DE2 /* StartController.swift */; };
 		C6F7D7C82677131200AF0DE2 /* UIView+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7D7C72677131200AF0DE2 /* UIView+Extended.swift */; };
 		ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD572676F45500144217 /* AppDelegate.swift */; };
@@ -23,6 +22,18 @@
 		ECBEAD622676F45500144217 /* Ramenology_uikit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD602676F45500144217 /* Ramenology_uikit.xcdatamodeld */; };
 		ECBEAD642676F45C00144217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD632676F45C00144217 /* Assets.xcassets */; };
 		ECBEAD672676F45C00144217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD652676F45C00144217 /* LaunchScreen.storyboard */; };
+		ECBEAD792676FC1500144217 /* RamenDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD782676FC1500144217 /* RamenDetailViewController.swift */; };
+		ECBEAD8B2678565C00144217 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD892678565C00144217 /* TextTableViewCell.swift */; };
+		ECBEAD902678566E00144217 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */; };
+		ECBEAD912678566E00144217 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */; };
+		ECBEAD9826786E3C00144217 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD9726786E3C00144217 /* Extension+UIView.swift */; };
+		ECBEADAF2678EB9200144217 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEADAD2678EB9200144217 /* EmptyStateTableViewCell.swift */; };
+		ECBEADB02678EB9200144217 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */; };
+		ECBEADB72678F4EE00144217 /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEADB62678F4EE00144217 /* FeedbackDetailViewController.swift */; };
+		ECBEADF32679128C00144217 /* RamenDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADF22679128C00144217 /* RamenDetailView.storyboard */; };
+		ECBEADF6267912AE00144217 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADF5267912AE00144217 /* Start.storyboard */; };
+		ECBEADF9267912D800144217 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADF8267912D800144217 /* TextTableViewCell.xib */; };
+		ECBEADFC26798CF400144217 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADFB26798CF400144217 /* test.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +43,6 @@
 		C6406C5D267881DE004CDD65 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6406C652678F1ED004CDD65 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		C6F7D7C02676FA0300AF0DE2 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		C6F7D7C42676FD9600AF0DE2 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		C6F7D7C72677131200AF0DE2 /* UIView+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extended.swift"; sourceTree = "<group>"; };
 		ECBEAD542676F45500144217 /* Ramenology-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ramenology-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,21 @@
 		ECBEAD632676F45C00144217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBEAD662676F45C00144217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECBEAD682676F45C00144217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBEAD782676FC1500144217 /* RamenDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenDetailViewController.swift; sourceTree = "<group>"; };
+		ECBEAD892678565C00144217 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		ECBEAD9726786E3C00144217 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		ECBEAD9D2678A29600144217 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		ECBEADA12678A8D600144217 /* RedHatDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RedHatDisplay-Medium.ttf"; path = "../../../../../Downloads/Red_Hat_Display/RedHatDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		ECBEADA32678A9FF00144217 /* RedHatDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RedHatDisplay-Bold.ttf"; path = "../../../../../Downloads/Red_Hat_Display/RedHatDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		ECBEADAD2678EB9200144217 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
+		ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
+		ECBEADB62678F4EE00144217 /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailViewController.swift; sourceTree = "<group>"; };
+		ECBEADF22679128C00144217 /* RamenDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RamenDetailView.storyboard; sourceTree = "<group>"; };
+		ECBEADF5267912AE00144217 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		ECBEADF8267912D800144217 /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		ECBEADFB26798CF400144217 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +93,17 @@
 		C6F7D7BF2676F9F400AF0DE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C6F7D7C02676FA0300AF0DE2 /* Start.storyboard */,
+				ECBEADF22679128C00144217 /* RamenDetailView.storyboard */,
+				ECBEADF8267912D800144217 /* TextTableViewCell.xib */,
+				ECBEADF5267912AE00144217 /* Start.storyboard */,
 				C638A6F4267848D2009386B0 /* CardViewCell.swift */,
+				ECBEAD892678565C00144217 /* TextTableViewCell.swift */,
+				ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */,
+				ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */,
+				ECBEADAD2678EB9200144217 /* EmptyStateTableViewCell.swift */,
+				ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */,
 				C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */,
+				ECBEADFB26798CF400144217 /* test.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -79,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				C6F7D7C42676FD9600AF0DE2 /* StartController.swift */,
+				ECBEAD782676FC1500144217 /* RamenDetailViewController.swift */,
+				ECBEADB62678F4EE00144217 /* FeedbackDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -96,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				C6F7D7C72677131200AF0DE2 /* UIView+Extended.swift */,
+				ECBEAD9726786E3C00144217 /* Extension+UIView.swift */,
 				C6406C5D267881DE004CDD65 /* UIColor+Style.swift */,
 			);
 			path = Extensions;
@@ -105,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				ECBEAD562676F45500144217 /* Ramenology-uikit */,
+				ECBEAD9C2678A09900144217 /* fonts */,
 				ECBEAD552676F45500144217 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,6 +172,16 @@
 				ECBEAD602676F45500144217 /* Ramenology_uikit.xcdatamodeld */,
 			);
 			path = "Ramenology-uikit";
+			sourceTree = "<group>";
+		};
+		ECBEAD9C2678A09900144217 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ECBEADA32678A9FF00144217 /* RedHatDisplay-Bold.ttf */,
+				ECBEADA12678A8D600144217 /* RedHatDisplay-Medium.ttf */,
+				ECBEAD9D2678A29600144217 /* Merriweather-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +241,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBEADF32679128C00144217 /* RamenDetailView.storyboard in Resources */,
 				ECBEAD672676F45C00144217 /* LaunchScreen.storyboard in Resources */,
-				C6F7D7C12676FA0300AF0DE2 /* Start.storyboard in Resources */,
 				ECBEAD642676F45C00144217 /* Assets.xcassets in Resources */,
+				ECBEAD912678566E00144217 /* ImageTableViewCell.xib in Resources */,
 				ECBEAD5F2676F45500144217 /* Main.storyboard in Resources */,
+				ECBEADF6267912AE00144217 /* Start.storyboard in Resources */,
 				C6406C5A2678596E004CDD65 /* Merriweather-Regular.ttf in Resources */,
+				ECBEADB02678EB9200144217 /* EmptyStateTableViewCell.xib in Resources */,
+				ECBEADFC26798CF400144217 /* test.storyboard in Resources */,
+				ECBEADF9267912D800144217 /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,14 +264,20 @@
 				ECBEAD5C2676F45500144217 /* ViewController.swift in Sources */,
 				C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */,
 				C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */,
-				ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */,
 				C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */,
+				ECBEAD902678566E00144217 /* ImageTableViewCell.swift in Sources */,
+				ECBEAD8B2678565C00144217 /* TextTableViewCell.swift in Sources */,
+				ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */,
+				ECBEADAF2678EB9200144217 /* EmptyStateTableViewCell.swift in Sources */,
+				ECBEAD792676FC1500144217 /* RamenDetailViewController.swift in Sources */,
 				ECBEAD5A2676F45500144217 /* SceneDelegate.swift in Sources */,
 				C6406C662678F1ED004CDD65 /* Tag.swift in Sources */,
 				ECBEAD622676F45500144217 /* Ramenology_uikit.xcdatamodeld in Sources */,
 				C6F7D7C82677131200AF0DE2 /* UIView+Extended.swift in Sources */,
 				C638A6F5267848D2009386B0 /* CardViewCell.swift in Sources */,
 				C6406C5726784AE5004CDD65 /* Card.swift in Sources */,
+				ECBEADB72678F4EE00144217 /* FeedbackDetailViewController.swift in Sources */,
+				ECBEAD9826786E3C00144217 /* Extension+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
