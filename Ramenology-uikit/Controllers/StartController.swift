@@ -57,6 +57,10 @@ extension StartController: UITableViewDataSource, UITableViewDelegate {
         return cards.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToDetailRamen", sender: Any?.self)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let card = cards[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardViewCell") as! CardViewCell
