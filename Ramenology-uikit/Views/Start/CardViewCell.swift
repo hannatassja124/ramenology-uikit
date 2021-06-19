@@ -13,7 +13,7 @@ class CardViewCell: UITableViewCell {
     @IBOutlet weak var tagsLabelView: UILabel!
     @IBOutlet weak var nameLabelView: UILabel!
     
-    func setCard(card: Card) {
+    func setCard(card: Ramen) {
         cardImageView.image = card.image
         tagsLabelView.text = "  "+card.tags+"  "
         nameLabelView.text = "  "+card.name+"  "

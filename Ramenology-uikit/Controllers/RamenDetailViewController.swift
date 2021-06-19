@@ -9,6 +9,8 @@ import UIKit
 
 class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var ramenDetail: Ramen?
+    
     var selectedStep: Steps = .feedback
     var ingredients: [String] = ["1 Kg, Chicken backs","900g, Chicken wings","500g Chicken feet","1, Onion, whole and quartered", "10-15, Garlic cloves,  minced", "3, Carrots, peeled", "3 tbsp, Mirin", "1/4 cup, Sake"]
     var steps: [String] = ["1. Add the chicken to a stockpot", "2. Bring the soup up to a boil briefly, skim any scum. Hold here for 5-10 minutes, or until scum subsides.", "3. Reduce heat back down to below simmer (around  88 °C/190 °F), hold for 5 hours."]
@@ -36,7 +38,12 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.register(UINib.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")
         self.tableView.register(UINib.init(nibName: "TextTableViewCell", bundle: .main), forCellReuseIdentifier: "TextTableViewCell")
         self.tableView.register(UINib.init(nibName: "EmptyStateTableViewCell", bundle: .main), forCellReuseIdentifier: "EmptyStateTableViewCell")
-        
+        initValue()
+    }
+    
+    func initValue() {
+        ramenTitle.text = ramenDetail!.name
+        category.text = ramenDetail!.tags
     }
     
     @IBAction func didChangeSegment2(_ sender: UISegmentedControl) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wed-fQ-UpW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -18,9 +18,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.40784313729999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="llc-Sb-pun"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y44-JE-i07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,11 +32,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A4s-3z-Mep">
-                                <rect key="frame" x="0.0" y="238" width="414" height="608"/>
+                                <rect key="frame" x="0.0" y="194" width="414" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardViewCell" rowHeight="225" id="NuI-dM-vRY" customClass="CardViewCell" customModule="Ramenology_uikit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="225"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NuI-dM-vRY" id="w21-8W-Nec">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
@@ -101,7 +98,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2T2-Yu-fh8">
-                                <rect key="frame" x="16" y="169" width="287" height="20.5"/>
+                                <rect key="frame" x="16" y="122" width="287" height="20.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Start creating a perfect ramen for you">
                                         <attributes>
@@ -112,12 +109,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsZ-dG-bgn">
-                                <rect key="frame" x="362" y="104" width="36" height="36"/>
+                                <rect key="frame" x="367" y="60" width="31" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="Add"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMS-1k-ud5">
-                                <rect key="frame" x="16" y="140" width="382" height="29"/>
+                                <rect key="frame" x="16" y="93" width="382" height="29"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Improve your ramen">
                                         <attributes>
@@ -129,7 +126,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3vC-V2-Dfr">
-                                <rect key="frame" x="16" y="194.5" width="382" height="30"/>
+                                <rect key="frame" x="16" y="147.5" width="382" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bQ4-Ts-Zes"/>
@@ -193,7 +190,6 @@
                         <outlet property="addButtonView" destination="IsZ-dG-bgn" id="M0j-TL-Wfe"/>
                         <outlet property="cardTableView" destination="A4s-3z-Mep" id="CdM-Fb-AvA"/>
                         <outlet property="tagsCollectionView" destination="3vC-V2-Dfr" id="gyd-WL-zzE"/>
-                        <segue destination="JP7-rZ-1M2" kind="show" identifier="goToDetailRamen" id="gu6-0Y-sfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
