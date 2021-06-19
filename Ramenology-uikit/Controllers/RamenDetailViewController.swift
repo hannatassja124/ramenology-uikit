@@ -50,6 +50,10 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.reloadData()
     }
     
+    @IBAction func addFeedback(_ sender: Any) {
+        performSegue(withIdentifier: "inputFeedback", sender: Any?.self)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (self.selectedStep == .ingredients) {
             return self.ingredients.count
