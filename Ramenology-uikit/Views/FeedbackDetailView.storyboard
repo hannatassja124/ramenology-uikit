@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dTb-58-80g">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-Regular.ttf">
+            <string>Merriweather-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Feedback Detail View Controller-->
+        <scene sceneID="ir8-ia-8rS">
+            <objects>
+                <viewController storyboardIdentifier="FeedbackDetailView" id="dTb-58-80g" customClass="FeedbackDetailViewController" customModule="Ramenology_uikit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pcF-PS-qof">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created: 05-03-21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1V2-XX-Lq1">
+                                <rect key="frame" x="255" y="106.5" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Broth Mama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efo-7W-BVp">
+                                <rect key="frame" x="16" y="60" width="382" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97V-MV-cfy">
+                                <rect key="frame" x="16" y="106.5" width="56" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baI-di-ONS">
+                                        <rect key="frame" x="12.5" y="5" width="31" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40784313729999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="baI-di-ONS" firstAttribute="centerX" secondItem="97V-MV-cfy" secondAttribute="centerX" id="6s5-du-MO1"/>
+                                    <constraint firstItem="baI-di-ONS" firstAttribute="centerY" secondItem="97V-MV-cfy" secondAttribute="centerY" id="9we-Jl-Vsl"/>
+                                    <constraint firstAttribute="height" constant="24" id="aMT-B6-y8I"/>
+                                    <constraint firstAttribute="width" constant="56" id="gFg-YP-tCl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="paC-03-1tF">
+                                <rect key="frame" x="0.0" y="162.5" width="414" height="699.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Ig-Ca-5dc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Ig-Ca-5dc" firstAttribute="trailing" secondItem="paC-03-1tF" secondAttribute="trailing" id="3Dm-Lm-Pau"/>
+                            <constraint firstItem="9Ig-Ca-5dc" firstAttribute="bottom" secondItem="paC-03-1tF" secondAttribute="bottom" id="6gf-9a-G3x"/>
+                            <constraint firstItem="97V-MV-cfy" firstAttribute="top" secondItem="efo-7W-BVp" secondAttribute="bottom" constant="16" id="DgY-ZC-IE1"/>
+                            <constraint firstItem="efo-7W-BVp" firstAttribute="top" secondItem="9Ig-Ca-5dc" secondAttribute="top" constant="16" id="Klq-yG-doX"/>
+                            <constraint firstItem="paC-03-1tF" firstAttribute="top" secondItem="97V-MV-cfy" secondAttribute="bottom" constant="32" id="L7X-rE-nkq"/>
+                            <constraint firstItem="paC-03-1tF" firstAttribute="leading" secondItem="9Ig-Ca-5dc" secondAttribute="leading" id="PWu-5f-JMB"/>
+                            <constraint firstItem="9Ig-Ca-5dc" firstAttribute="trailing" secondItem="1V2-XX-Lq1" secondAttribute="trailing" constant="16" id="Pkv-Ep-0co"/>
+                            <constraint firstItem="1V2-XX-Lq1" firstAttribute="top" secondItem="efo-7W-BVp" secondAttribute="bottom" constant="16" id="QtF-dg-n4x"/>
+                            <constraint firstItem="efo-7W-BVp" firstAttribute="leading" secondItem="9Ig-Ca-5dc" secondAttribute="leading" constant="16" id="W52-2c-ePV"/>
+                            <constraint firstItem="97V-MV-cfy" firstAttribute="leading" secondItem="9Ig-Ca-5dc" secondAttribute="leading" constant="16" id="Z5r-g4-PBx"/>
+                            <constraint firstItem="9Ig-Ca-5dc" firstAttribute="trailing" secondItem="efo-7W-BVp" secondAttribute="trailing" constant="16" id="ggY-Ow-iCi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="paC-03-1tF" id="50A-OA-tm9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5D-zi-zsj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
