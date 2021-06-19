@@ -22,6 +22,8 @@
         <!--Ramen Detail View Controller-->
         <scene sceneID="Hwl-x0-p8n">
             <objects>
+                <exit id="5cY-zf-C2k" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwr-dR-Zvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RamenDetailView" id="2qy-0S-n70" customClass="RamenDetailViewController" customModule="Ramenology_uikit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7mo-KP-hIx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -132,8 +134,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fV-Ha-xIs">
                                 <rect key="frame" x="18" y="98.5" width="56" height="24"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Broth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ib-vI-y9s">
-                                        <rect key="frame" x="7" y="1" width="41.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ib-vI-y9s">
+                                        <rect key="frame" x="13" y="4" width="30.5" height="16"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -178,6 +180,10 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addFeedback:" destination="2qy-0S-n70" eventType="touchUpInside" id="WiE-ai-Ib5"/>
+                                    <action selector="addFeedback:" destination="5cY-zf-C2k" eventType="touchUpInside" id="udS-Ob-bpM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Waa-GO-HfY"/>
@@ -216,43 +222,40 @@
                     <navigationItem key="navigationItem" id="dzB-Jd-m80"/>
                     <connections>
                         <outlet property="banner" destination="X8G-yg-d8z" id="mNo-kB-0do"/>
+                        <outlet property="category" destination="3Ib-vI-y9s" id="Ea4-Gl-znN"/>
                         <outlet property="cookingHours" destination="upK-I5-7Pe" id="Qfi-Qn-nsT"/>
                         <outlet property="cookingServings" destination="mcQ-x9-v44" id="YQm-e5-usJ"/>
+                        <outlet property="createdDate" destination="yGO-OS-VQw" id="aUZ-e2-pUo"/>
                         <outlet property="ramenTitle" destination="EFP-wh-JpW" id="7mD-PJ-izG"/>
                         <outlet property="segmenttedStep" destination="Nk3-WX-tDO" id="tmz-FK-Vv2"/>
                         <outlet property="source" destination="ryP-Fj-oAP" id="Zgz-L9-ueA"/>
                         <outlet property="tableView" destination="FSZ-2Z-pGb" id="3qW-Wa-SaG"/>
-                        <segue destination="waf-LH-MJS" kind="show" identifier="goToDetailFeedback" id="mwG-ZH-OFy"/>
+                        <segue destination="PJw-pC-PAT" kind="show" identifier="goToDetailFeedback" id="Zie-dq-zcy"/>
+                        <segue destination="1IP-Po-ouM" kind="show" identifier="inputFeedback" id="eCZ-pL-0dy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwr-dR-Zvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="-244.41964285714283"/>
         </scene>
-        <!--Feedback Detail View Controller-->
-        <scene sceneID="C76-NQ-tIj">
+        <!--FeedbackDetailView-->
+        <scene sceneID="e5E-Yp-n4y">
             <objects>
-                <viewController id="waf-LH-MJS" customClass="FeedbackDetailViewController" customModule="Ramenology_uikit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dni-GI-b1D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feedback Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0U-Ub-Psc">
-                                <rect key="frame" x="158" y="316" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Kbr-1J-0sd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="dpM-Zw-x7n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FFg-Sz-Lfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="FeedbackDetailView" storyboardName="FeedbackDetailView" id="PJw-pC-PAT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ori-Me-mbZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UxI-Uq-kUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="-244"/>
+            <point key="canvasLocation" x="1018" y="-244"/>
+        </scene>
+        <!--InputFeedbackView-->
+        <scene sceneID="Eb3-A0-lzp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="InputFeedbackVIew" storyboardName="InputFeedbackView" id="1IP-Po-ouM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="03Q-JO-bUq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdA-0J-1rM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="-146"/>
         </scene>
     </scenes>
     <resources>
