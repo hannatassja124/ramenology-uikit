@@ -42,6 +42,8 @@
 		ECBEAE04267A48DA00144217 /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */; };
 		ECBEAE08267A4DD300144217 /* FeedbackDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */; };
 		ECBEAE09267A4DD300144217 /* FeedbackDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */; };
+		F9EB70B2267DA934001D252F /* AddRecipeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9EB70B1267DA934001D252F /* AddRecipeView.storyboard */; };
+		F9EB70B4267DC83E001D252F /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB70B3267DC83E001D252F /* AddRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailViewController.swift; sourceTree = "<group>"; };
 		ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackDetailTableViewCell.xib; sourceTree = "<group>"; };
+		F9EB70B1267DA934001D252F /* AddRecipeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipeView.storyboard; sourceTree = "<group>"; };
+		F9EB70B3267DC83E001D252F /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		C6F7D7BF2676F9F400AF0DE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F9EB70B0267DA904001D252F /* AddRecipe */,
 				C6FDA51C267DA6C1006C377A /* InputFeedback */,
 				C6FDA51B267DA68C006C377A /* FeedbackDetail */,
 				C6FDA51A267DA664006C377A /* RamenDetail */,
@@ -121,6 +126,7 @@
 				ECBEAD782676FC1500144217 /* RamenDetailViewController.swift */,
 				ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */,
 				EC413AAF267AF238001FCC94 /* InputFeedbackViewController.swift */,
+				F9EB70B3267DC83E001D252F /* AddRecipeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +232,14 @@
 			path = "Ramenology-uikit";
 			sourceTree = "<group>";
 		};
+		F9EB70B0267DA904001D252F /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				F9EB70B1267DA934001D252F /* AddRecipeView.storyboard */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,6 +306,7 @@
 				ECBEAD912678566E00144217 /* ImageTableViewCell.xib in Resources */,
 				ECBEADF6267912AE00144217 /* Start.storyboard in Resources */,
 				C6406C5A2678596E004CDD65 /* Merriweather-Regular.ttf in Resources */,
+				F9EB70B2267DA934001D252F /* AddRecipeView.storyboard in Resources */,
 				ECBEADB02678EB9200144217 /* EmptyStateTableViewCell.xib in Resources */,
 				EC78203E267C4D0F00960C42 /* SubmitButtonTableViewCell.xib in Resources */,
 				ECBEADF9267912D800144217 /* TextTableViewCell.xib in Resources */,
@@ -327,6 +342,7 @@
 				EC413AB0267AF238001FCC94 /* InputFeedbackViewController.swift in Sources */,
 				C638A6F5267848D2009386B0 /* CardViewCell.swift in Sources */,
 				C6406C5726784AE5004CDD65 /* Card.swift in Sources */,
+				F9EB70B4267DC83E001D252F /* AddRecipeViewController.swift in Sources */,
 				ECBEAD9826786E3C00144217 /* Extension+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
