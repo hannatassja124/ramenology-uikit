@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackDetailTableViewCell" customModule="Ramenology_uikit" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedbackDetailTableViewCell" rowHeight="179" id="KGk-i7-Jjw" customClass="FeedbackDetailTableViewCell" customModule="Ramenology_uikit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-zs-gsy">
+                        <rect key="frame" x="0.0" y="8" width="320" height="134"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texture - “Chosen”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5h-7c-aPd">
+                                <rect key="frame" x="16" y="8" width="166" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 4/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-pG-hQO">
+                                <rect key="frame" x="227" y="8" width="77" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.40784313729999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTz-of-5hC">
+                                <rect key="frame" x="16" y="47" width="288" height="90"/>
+                                <string key="text">Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p5h-7c-aPd" firstAttribute="leading" secondItem="0Mb-zs-gsy" secondAttribute="leading" constant="16" id="1Fk-A3-zGs"/>
+                            <constraint firstItem="G0U-pG-hQO" firstAttribute="top" secondItem="0Mb-zs-gsy" secondAttribute="top" constant="8" id="4qa-Os-o64"/>
+                            <constraint firstItem="TTz-of-5hC" firstAttribute="top" secondItem="p5h-7c-aPd" secondAttribute="bottom" constant="16" id="AwW-0L-zbY"/>
+                            <constraint firstAttribute="trailing" secondItem="G0U-pG-hQO" secondAttribute="trailing" constant="16" id="Ewv-8b-DgB"/>
+                            <constraint firstAttribute="height" constant="134" id="RUP-JZ-dYq"/>
+                            <constraint firstItem="TTz-of-5hC" firstAttribute="leading" secondItem="0Mb-zs-gsy" secondAttribute="leading" constant="16" id="jin-nE-bqh"/>
+                            <constraint firstAttribute="trailing" secondItem="TTz-of-5hC" secondAttribute="trailing" constant="16" id="nSc-77-3gX"/>
+                            <constraint firstItem="p5h-7c-aPd" firstAttribute="top" secondItem="0Mb-zs-gsy" secondAttribute="top" constant="8" id="vdf-wE-uBP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0Mb-zs-gsy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Kzc-lO-djr"/>
+                    <constraint firstAttribute="bottom" secondItem="0Mb-zs-gsy" secondAttribute="bottom" id="fKE-uL-vC7"/>
+                    <constraint firstItem="0Mb-zs-gsy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="mjD-Id-XhC"/>
+                    <constraint firstAttribute="trailing" secondItem="0Mb-zs-gsy" secondAttribute="trailing" id="uTB-CX-lSe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="160.86956521739131" y="165.73660714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
