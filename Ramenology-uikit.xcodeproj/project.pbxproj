@@ -25,8 +25,6 @@
 		EC78203E267C4D0F00960C42 /* SubmitButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC78203C267C4D0F00960C42 /* SubmitButtonTableViewCell.xib */; };
 		ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD572676F45500144217 /* AppDelegate.swift */; };
 		ECBEAD5A2676F45500144217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD592676F45500144217 /* SceneDelegate.swift */; };
-		ECBEAD5C2676F45500144217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD5B2676F45500144217 /* ViewController.swift */; };
-		ECBEAD5F2676F45500144217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD5D2676F45500144217 /* Main.storyboard */; };
 		ECBEAD622676F45500144217 /* Ramenology_uikit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD602676F45500144217 /* Ramenology_uikit.xcdatamodeld */; };
 		ECBEAD642676F45C00144217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD632676F45C00144217 /* Assets.xcassets */; };
 		ECBEAD672676F45C00144217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD652676F45C00144217 /* LaunchScreen.storyboard */; };
@@ -66,8 +64,6 @@
 		ECBEAD542676F45500144217 /* Ramenology-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ramenology-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBEAD572676F45500144217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECBEAD592676F45500144217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECBEAD5B2676F45500144217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECBEAD5E2676F45500144217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECBEAD612676F45500144217 /* Ramenology_uikit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ramenology_uikit.xcdatamodel; sourceTree = "<group>"; };
 		ECBEAD632676F45C00144217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBEAD662676F45C00144217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,9 +73,6 @@
 		ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		ECBEAD9726786E3C00144217 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
-		ECBEAD9D2678A29600144217 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "../../../../../Downloads/Merriweather/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
-		ECBEADA12678A8D600144217 /* RedHatDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RedHatDisplay-Medium.ttf"; path = "../../../../../Downloads/Red_Hat_Display/RedHatDisplay-Medium.ttf"; sourceTree = "<group>"; };
-		ECBEADA32678A9FF00144217 /* RedHatDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RedHatDisplay-Bold.ttf"; path = "../../../../../Downloads/Red_Hat_Display/RedHatDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		ECBEADAD2678EB9200144217 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
 		ECBEADF22679128C00144217 /* RamenDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RamenDetailView.storyboard; sourceTree = "<group>"; };
@@ -113,26 +106,10 @@
 		C6F7D7BF2676F9F400AF0DE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ECBEADF22679128C00144217 /* RamenDetailView.storyboard */,
-				ECBEADF5267912AE00144217 /* Start.storyboard */,
-				C638A6F4267848D2009386B0 /* CardViewCell.swift */,
-				ECBEAD892678565C00144217 /* TextTableViewCell.swift */,
-				ECBEADF8267912D800144217 /* TextTableViewCell.xib */,
-				ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */,
-				ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */,
-				ECBEADAD2678EB9200144217 /* EmptyStateTableViewCell.swift */,
-				ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */,
-				C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */,
-				ECBEAE00267A48AD00144217 /* FeedbackDetailView.storyboard */,
-				ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */,
-				ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */,
-				EC413AA1267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift */,
-				EC413AA2267AEA5C001FCC94 /* InputFeedbackTableViewCell.xib */,
-				EC413AAC267AF200001FCC94 /* InputFeedbackView.storyboard */,
-				EC5A0F1E267BA27E00DD8FB7 /* FeedbackCollectionViewCell.swift */,
-				EC5A0F1F267BA27E00DD8FB7 /* FeedbackCollectionViewCell.xib */,
-				EC78203B267C4D0F00960C42 /* SubmitButtonTableViewCell.swift */,
-				EC78203C267C4D0F00960C42 /* SubmitButtonTableViewCell.xib */,
+				C6FDA51C267DA6C1006C377A /* InputFeedback */,
+				C6FDA51B267DA68C006C377A /* FeedbackDetail */,
+				C6FDA51A267DA664006C377A /* RamenDetail */,
+				C6FDA519267DA644006C377A /* Start */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,11 +144,58 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C6FDA519267DA644006C377A /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				ECBEADF5267912AE00144217 /* Start.storyboard */,
+				C638A6F4267848D2009386B0 /* CardViewCell.swift */,
+				C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		C6FDA51A267DA664006C377A /* RamenDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ECBEADF22679128C00144217 /* RamenDetailView.storyboard */,
+				ECBEAD892678565C00144217 /* TextTableViewCell.swift */,
+				ECBEADF8267912D800144217 /* TextTableViewCell.xib */,
+				ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */,
+				ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */,
+				ECBEADAD2678EB9200144217 /* EmptyStateTableViewCell.swift */,
+				ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */,
+			);
+			path = RamenDetail;
+			sourceTree = "<group>";
+		};
+		C6FDA51B267DA68C006C377A /* FeedbackDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ECBEAE00267A48AD00144217 /* FeedbackDetailView.storyboard */,
+				ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */,
+				ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */,
+			);
+			path = FeedbackDetail;
+			sourceTree = "<group>";
+		};
+		C6FDA51C267DA6C1006C377A /* InputFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				EC413AA1267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift */,
+				EC5A0F1E267BA27E00DD8FB7 /* FeedbackCollectionViewCell.swift */,
+				EC5A0F1F267BA27E00DD8FB7 /* FeedbackCollectionViewCell.xib */,
+				EC413AA2267AEA5C001FCC94 /* InputFeedbackTableViewCell.xib */,
+				EC413AAC267AF200001FCC94 /* InputFeedbackView.storyboard */,
+				EC78203B267C4D0F00960C42 /* SubmitButtonTableViewCell.swift */,
+				EC78203C267C4D0F00960C42 /* SubmitButtonTableViewCell.xib */,
+			);
+			path = InputFeedback;
+			sourceTree = "<group>";
+		};
 		ECBEAD4B2676F45500144217 = {
 			isa = PBXGroup;
 			children = (
 				ECBEAD562676F45500144217 /* Ramenology-uikit */,
-				ECBEAD9C2678A09900144217 /* fonts */,
 				ECBEAD552676F45500144217 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -194,24 +218,12 @@
 				C6F7D7BF2676F9F400AF0DE2 /* Views */,
 				ECBEAD572676F45500144217 /* AppDelegate.swift */,
 				ECBEAD592676F45500144217 /* SceneDelegate.swift */,
-				ECBEAD5B2676F45500144217 /* ViewController.swift */,
-				ECBEAD5D2676F45500144217 /* Main.storyboard */,
 				ECBEAD632676F45C00144217 /* Assets.xcassets */,
 				ECBEAD652676F45C00144217 /* LaunchScreen.storyboard */,
 				ECBEAD682676F45C00144217 /* Info.plist */,
 				ECBEAD602676F45500144217 /* Ramenology_uikit.xcdatamodeld */,
 			);
 			path = "Ramenology-uikit";
-			sourceTree = "<group>";
-		};
-		ECBEAD9C2678A09900144217 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				ECBEADA32678A9FF00144217 /* RedHatDisplay-Bold.ttf */,
-				ECBEADA12678A8D600144217 /* RedHatDisplay-Medium.ttf */,
-				ECBEAD9D2678A29600144217 /* Merriweather-Regular.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +290,6 @@
 				EC413AA4267AEA5C001FCC94 /* InputFeedbackTableViewCell.xib in Resources */,
 				ECBEAD642676F45C00144217 /* Assets.xcassets in Resources */,
 				ECBEAD912678566E00144217 /* ImageTableViewCell.xib in Resources */,
-				ECBEAD5F2676F45500144217 /* Main.storyboard in Resources */,
 				ECBEADF6267912AE00144217 /* Start.storyboard in Resources */,
 				C6406C5A2678596E004CDD65 /* Merriweather-Regular.ttf in Resources */,
 				ECBEADB02678EB9200144217 /* EmptyStateTableViewCell.xib in Resources */,
@@ -296,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBEAD5C2676F45500144217 /* ViewController.swift in Sources */,
 				C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */,
 				C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */,
 				C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */,
@@ -324,14 +334,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ECBEAD5D2676F45500144217 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECBEAD5E2676F45500144217 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECBEAD652676F45C00144217 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
