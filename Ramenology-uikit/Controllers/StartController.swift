@@ -14,12 +14,12 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
     @IBOutlet weak var tagsCollectionView: UICollectionView!
     
     var tags: [Tag] = []
-    var cards: [Card] = []
+    var cards: [Ramen] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initCard(tags: "")
-        initTag(selected: tag.all.rawValue)
+        initTag(selected: tag_enum.all.rawValue)
         initAddButton()
         cardTableView.backgroundColor = .appWhite
         cardTableView.delegate = self
@@ -52,13 +52,9 @@ protocol tagsProtocols {
     func initTag(selected: String)
 }
 
-extension StartController: UITableViewDataSource, UITableViewDelegate {
+extension StartController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cards.count
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToDetailRamen", sender: Any?.self)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,8 +65,20 @@ extension StartController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-    
-    
+}
+
+extension StartController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedCard = cards[indexPath.row]
+        
+        let sb = UIStoryboard(name: "RamenDetailView", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "RamenDetailView") as! RamenDetailViewController
+        vc.ramenDetail = selectedCard
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+        // performSegue(withIdentifier: "goToDetailRamen", sender: Any?.self)
+    }
 }
 
 extension StartController: UICollectionViewDelegate, UICollectionViewDataSource {

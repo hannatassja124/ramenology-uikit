@@ -8,22 +8,24 @@
 import UIKit
 
 class Tag {
+    var id: Int
     var name: String
     var isSelected: Bool
     
-    init(name: String, isSelected: Bool) {
+    init(id: Int, name: String, isSelected: Bool) {
+        self.id = id
         self.name = name
         self.isSelected = isSelected
     }
 }
 
-func getTag(selected: String = tag.all.rawValue) -> [Tag] {
+func getTag(selected: String = tag_enum.all.rawValue) -> [Tag] {
     let tempTags: [Tag] = [
-        Tag(name: tag.all.rawValue, isSelected: false),
-        Tag(name: tag.broth.rawValue, isSelected: false),
-        Tag(name: tag.tare.rawValue, isSelected: false),
-        Tag(name: tag.topping.rawValue, isSelected: false),
-        Tag(name: tag.noodle.rawValue, isSelected: false),
+        Tag(id: 1,name: tag_enum.all.rawValue, isSelected: false),
+        Tag(id: 2,name: tag_enum.broth.rawValue, isSelected: false),
+        Tag(id: 3,name: tag_enum.tare.rawValue, isSelected: false),
+        Tag(id: 4,name: tag_enum.topping.rawValue, isSelected: false),
+        Tag(id: 5,name: tag_enum.noodle.rawValue, isSelected: false),
     ]
     
     let tempTag = selected.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -37,7 +39,7 @@ func getTag(selected: String = tag.all.rawValue) -> [Tag] {
     return resultTag
 }
 
-enum tag: String {
+enum tag_enum: String {
     case all = "All"
     case broth = "Broth"
     case tare = "Tare"
