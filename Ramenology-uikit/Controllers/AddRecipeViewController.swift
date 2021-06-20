@@ -62,16 +62,26 @@ class servingPickerCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewData
     
 }
 
+enum Segment: String {
+    case ingredient
+    case process
+}
+
 class AddRecipeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var label: UILabel!
     
     var categories = ["Soup", "Broth", "Topping", "Tare"]
     var number:[Int] = Array(1...20)
     
+    var selectedSteps : Segment = .ingredient
+    var testIng = ["Ing 1", "Ing 2", "Ing 3", "Ing 4"]
+    var testProc = ["test 1", "test 2", "test 3", "test 4"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -79,7 +89,15 @@ class AddRecipeViewController: UIViewController {
         //self.categoryPicker.dataSource = self
     }
 
-
+    @IBAction func segmentIngProc(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.selectedSteps = .ingredient
+        } else {
+            self.selectedSteps = .process
+        }
+        self.tableView.reloadData()
+    }
+    
 }
 
 extension AddRecipeViewController: UITableViewDelegate {
@@ -97,7 +115,11 @@ extension AddRecipeViewController:UITableViewDataSource {
         } else if (section == 1){
             return 8
         } else if (section == 2){
-            return 2
+            if self.selectedSteps == .ingredient {
+                return testIng.count + 1
+            } else {
+                return testProc.count + 1
+            }
         } else if (section == 3) {
             return 1
         } else {
@@ -120,37 +142,42 @@ extension AddRecipeViewController:UITableViewDataSource {
             return cell
         } else if indexPath.section == 1 && indexPath.row == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "pickerCategory", for: indexPath) as! categoryPickerCell
-           //cell.categories = categories
-            //cell.isHidden = true
-            //cell.categoryPicker.reloadAllComponents();
+            cell.categories = categories
+            cell.isHidden = true
+            cell.categoryPicker.reloadAllComponents();
             return cell
         } else if indexPath.section == 1 && indexPath.row == 4{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cookingTime", for: indexPath)
             return cell
         } else if indexPath.section == 1 && indexPath.row == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cookingPicker", for: indexPath)
-            //cell.isHidden = true
+            cell.isHidden = true
             return cell
         } else if indexPath.section == 1 && indexPath.row == 6{
             let cell = tableView.dequeueReusableCell(withIdentifier: "totalServing", for: indexPath)
             return cell
         } else if indexPath.section == 1 && indexPath.row == 7{
             let cell = tableView.dequeueReusableCell(withIdentifier: "servingPicker", for: indexPath) as! servingPickerCell
-            //cell.totalServing = number
-            //cell.isHidden = true
-            //cell.servingPicker.reloadAllComponents();
+            cell.totalServing = number
+            cell.isHidden = true
+            cell.servingPicker.reloadAllComponents();
             return cell
         } else if indexPath.section == 2 && indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "segmentIngProc", for: indexPath)
             return cell
         } else if indexPath.section == 2 && indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            if self.selectedSteps == .ingredient {
+                cell.textLabel?.text =  self.testIng[indexPath.row]
+            } else {
+                cell.textLabel?.text =  self.testProc[indexPath.row]
+            }
             return cell
         } else if indexPath.section == 3 && indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "addButton", for: indexPath)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "recipeName", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             return cell
         }
     }
@@ -161,8 +188,17 @@ extension AddRecipeViewController:UITableViewDataSource {
         let servingPicker = NSIndexPath(row: 7, section: 1) as IndexPath
         
         let categoryCell =  tableView.cellForRow(at: categoryPicker)
-        //        let cookingCell =  tableView.cellForRow(at: cookingPicker)
-        //        let servingCell =  tableView.cellForRow(at: servingPicker)
+        let cookingCell =  tableView.cellForRow(at: cookingPicker)
+        let servingCell =  tableView.cellForRow(at: servingPicker)
+        
+        let categoryTrue = categoryPicker == indexPath && (categoryCell?.isHidden == true || categoryCell?.isHidden == nil)
+        let categoryFalse = categoryPicker == indexPath && categoryCell?.isHidden == false
+        
+        let cookingTrue = cookingPicker == indexPath && (cookingCell?.isHidden == true || cookingCell?.isHidden == nil)
+        let cookingFalse = cookingPicker == indexPath && cookingCell?.isHidden == false
+        
+        let servingTrue = servingPicker == indexPath && (servingCell?.isHidden == true || servingCell?.isHidden == nil)
+        let servingFalse = servingPicker == indexPath && servingCell?.isHidden == false
         
         var tempHeight:CGFloat = 44
         
@@ -170,13 +206,11 @@ extension AddRecipeViewController:UITableViewDataSource {
             tempHeight = 168.0
         }
         
-        if indexPath.section == 1 && indexPath.row == 3 && categoryCell?.isHidden == true {
+        if cookingTrue || servingTrue || categoryTrue{
             tempHeight = 0.0
-        } else if indexPath.section == 1 && indexPath.row == 3 && categoryCell?.isHidden == false{
+        } else if cookingFalse || servingFalse || categoryFalse {
             tempHeight = 147.0
         }
-        
-        
         
         return tempHeight
     }
@@ -191,11 +225,11 @@ extension AddRecipeViewController:UITableViewDataSource {
         let servingPicker = NSIndexPath(row: 7, section: 1) as IndexPath
         
         if servingPath as IndexPath == indexPath {
-            hiddenViewDatePicker(indexPath: servingPicker)
+            hiddenViewDatePicker(fieldName: "serving", indexPath: servingPicker)
         } else if cookingPath as IndexPath == indexPath {
-            hiddenViewDatePicker(indexPath: cookingPicker)
+            hiddenViewDatePicker(fieldName: "cooking" ,indexPath: cookingPicker)
         } else if categoryPath as IndexPath == indexPath {
-            hiddenViewDatePicker(indexPath: categoryPicker)
+            hiddenViewDatePicker(fieldName: "category",indexPath: categoryPicker)
         }
     }
     
@@ -207,22 +241,21 @@ extension AddRecipeViewController:UITableViewDataSource {
         })
     }
     
-    func hiddenViewDatePicker(indexPath: IndexPath){
-//        let categoryPicker = NSIndexPath(row: 3, section: 1) as IndexPath
-//        let cookingPicker = NSIndexPath(row: 5, section: 1) as IndexPath
-//        let servingPicker = NSIndexPath(row: 7, section: 1) as IndexPath
-//
-//        let categoryCell =  tableView.cellForRow(at: categoryPicker)
-//        let cookingCell =  tableView.cellForRow(at: cookingPicker)
-//        let servingCell =  tableView.cellForRow(at: servingPicker)
-//
-//        categoryCell?.isHidden = fieldName == "category" ? !categoryCell!.isHidden : true
-//        servingCell?.isHidden = fieldName == "serving" ? !servingCell!.isHidden : true
-//        cookingCell?.isHidden = fieldName == "cooking" ? !cookingCell!.isHidden : true
+    func hiddenViewDatePicker(fieldName: String, indexPath: IndexPath){
+        let categoryPicker = NSIndexPath(row: 3, section: 1) as IndexPath
+        let cookingPicker = NSIndexPath(row: 5, section: 1) as IndexPath
+        let servingPicker = NSIndexPath(row: 7, section: 1) as IndexPath
+
+        let categoryCell =  tableView.cellForRow(at: categoryPicker)
+        let cookingCell =  tableView.cellForRow(at: cookingPicker)
+        let servingCell =  tableView.cellForRow(at: servingPicker)
         
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.isHidden = !(cell?.isHidden ?? true)
+        categoryCell?.isHidden = fieldName == "category" ? !categoryCell!.isHidden : true;
+        servingCell?.isHidden = fieldName == "serving" ? !servingCell!.isHidden : true;
+        cookingCell?.isHidden = fieldName == "cooking" ? !cookingCell!.isHidden : true ;
+        
         animateDatePickerView(iP: indexPath)
+    
     }
 
     
