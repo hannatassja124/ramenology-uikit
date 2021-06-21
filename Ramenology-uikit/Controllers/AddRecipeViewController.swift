@@ -12,7 +12,7 @@ enum Segment: String {
     case process
 }
 
-class AddRecipeViewController: UIViewController, setValueDelegate {
+class AddRecipeViewController: UIViewController, setValueDelegate, deleteCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,8 +20,8 @@ class AddRecipeViewController: UIViewController, setValueDelegate {
     var number:[Int] = Array(1...20)
     
     var selectedSteps : Segment = .ingredient
-    var testIng:[String] = []
-    var testProc:[String] = []
+    var testIng:[String] = [""]
+    var testProc:[String] = [""]
     
     var category = "Soup"
     var serving = "1"
@@ -32,10 +32,23 @@ class AddRecipeViewController: UIViewController, setValueDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title:"Save", style: .plain, target: self, action: #selector(buttonClicked(sender:)))
+        
     }
-
+    
+    @objc func buttonClicked(sender: UIBarButtonItem) {
+            
+    }
+    
+    
     @IBAction func addCell(_ sender: Any) {
-        self.tableView.reloadData()
+        if selectedSteps == .ingredient {
+            testIng.append("")
+        } else {
+            testProc.append("")
+        }
+        
+        tableView.reloadData()
     }
     
     @IBAction func segmentIngProc(_ sender: UISegmentedControl) {
@@ -60,10 +73,22 @@ class AddRecipeViewController: UIViewController, setValueDelegate {
         }
     }
     
+    func deleteCell(row: Int){
+        if selectedSteps == .ingredient {
+            testIng.remove(at: row)
+        } else {
+            testProc.remove(at: row)
+        }
+    }
+    
 }
 
 protocol setValueDelegate: AnyObject {
     func setCategory(fieldName: String, value: String)
+}
+
+protocol deleteCellDelegate: AnyObject {
+    func deleteCell(row: Int)
 }
 
 extension AddRecipeViewController: UITableViewDelegate {
@@ -146,6 +171,7 @@ extension AddRecipeViewController:UITableViewDataSource {
             } else {
                 cell.dataTable = testProc
             }
+            cell.delegate = self
             cell.tableView.reloadData()
             return cell
         } else if indexPath.section == 3 && indexPath.row == 0{
