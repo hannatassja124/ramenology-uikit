@@ -9,6 +9,10 @@ import UIKit
 
 class FeedbackDetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
