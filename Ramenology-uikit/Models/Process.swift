@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Process {
+class Processes {
     var id: Int
     var name: String
     

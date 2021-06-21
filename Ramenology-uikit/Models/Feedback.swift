@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Feedback {
+class Feedbacks {
     var id: Int
     var name: String
     var tag: tag_enum
@@ -23,7 +23,7 @@ class Feedback {
     }
 }
 
-class FeedbackDetail {
+class FeedbacksDetail {
     var id: Int
     var title: String
     var rating: Int
