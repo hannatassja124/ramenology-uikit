@@ -24,7 +24,7 @@ class TagsCollectionViewCell: UICollectionViewCell {
             tagLabelView.backgroundColor = .appWhite
             tagLabelView.textColor = .appRed
         }
-        tagLabelView.cornerRadius = 10
+        tagLabelView.cornerRadius = 5
         
         tagLabelView.isUserInteractionEnabled = true
         
