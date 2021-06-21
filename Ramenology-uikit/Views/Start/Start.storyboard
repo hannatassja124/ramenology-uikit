@@ -115,6 +115,9 @@
                                 <rect key="frame" x="367" y="104" width="31" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="UuK-Sq-oMC" kind="show" id="Ue1-XK-mcO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMS-1k-ud5">
                                 <rect key="frame" x="16" y="137" width="382" height="29"/>
@@ -199,6 +202,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--AddRecipeView-->
+        <scene sceneID="BJP-Kl-mY8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddRecipeView" id="UuK-Sq-oMC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lm9-sc-LQK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45k-By-yls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="-141"/>
         </scene>
         <!--RamenDetailView-->
         <scene sceneID="CNt-uc-uSc">

@@ -45,6 +45,13 @@
 		ECBEAE04267A48DA00144217 /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */; };
 		ECBEAE08267A4DD300144217 /* FeedbackDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */; };
 		ECBEAE09267A4DD300144217 /* FeedbackDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */; };
+		F95CB1F726803FE80065B523 /* categoryPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1F626803FE80065B523 /* categoryPickerCell.swift */; };
+		F95CB1F9268040360065B523 /* servingPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1F8268040360065B523 /* servingPickerCell.swift */; };
+		F95CB1FB2680407B0065B523 /* detailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1FA2680407B0065B523 /* detailCell.swift */; };
+		F95CB1FE268040D80065B523 /* ingProcTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1FD268040D80065B523 /* ingProcTable.swift */; };
+		F95CB200268041030065B523 /* cookingPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1FF268041030065B523 /* cookingPickerCell.swift */; };
+		F9EB70B2267DA934001D252F /* AddRecipeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9EB70B1267DA934001D252F /* AddRecipeView.storyboard */; };
+		F9EB70B4267DC83E001D252F /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB70B3267DC83E001D252F /* AddRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +95,13 @@
 		ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailViewController.swift; sourceTree = "<group>"; };
 		ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackDetailTableViewCell.xib; sourceTree = "<group>"; };
+		F95CB1F626803FE80065B523 /* categoryPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryPickerCell.swift; sourceTree = "<group>"; };
+		F95CB1F8268040360065B523 /* servingPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = servingPickerCell.swift; sourceTree = "<group>"; };
+		F95CB1FA2680407B0065B523 /* detailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailCell.swift; sourceTree = "<group>"; };
+		F95CB1FD268040D80065B523 /* ingProcTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingProcTable.swift; sourceTree = "<group>"; };
+		F95CB1FF268041030065B523 /* cookingPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingPickerCell.swift; sourceTree = "<group>"; };
+		F9EB70B1267DA934001D252F /* AddRecipeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipeView.storyboard; sourceTree = "<group>"; };
+		F9EB70B3267DC83E001D252F /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +126,7 @@
 		C6F7D7BF2676F9F400AF0DE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F9EB70B0267DA904001D252F /* AddRecipe */,
 				C6FDA51C267DA6C1006C377A /* InputFeedback */,
 				C6FDA51B267DA68C006C377A /* FeedbackDetail */,
 				C6FDA51A267DA664006C377A /* RamenDetail */,
@@ -127,6 +142,7 @@
 				ECBEAD782676FC1500144217 /* RamenDetailViewController.swift */,
 				ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */,
 				EC413AAF267AF238001FCC94 /* InputFeedbackViewController.swift */,
+				F9EB70B3267DC83E001D252F /* AddRecipeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +251,19 @@
 			path = "Ramenology-uikit";
 			sourceTree = "<group>";
 		};
+		F9EB70B0267DA904001D252F /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				F9EB70B1267DA934001D252F /* AddRecipeView.storyboard */,
+				F95CB1F626803FE80065B523 /* categoryPickerCell.swift */,
+				F95CB1F8268040360065B523 /* servingPickerCell.swift */,
+				F95CB1FA2680407B0065B523 /* detailCell.swift */,
+				F95CB1FD268040D80065B523 /* ingProcTable.swift */,
+				F95CB1FF268041030065B523 /* cookingPickerCell.swift */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,6 +330,7 @@
 				ECBEAD912678566E00144217 /* ImageTableViewCell.xib in Resources */,
 				ECBEADF6267912AE00144217 /* Start.storyboard in Resources */,
 				C6406C5A2678596E004CDD65 /* Merriweather-Regular.ttf in Resources */,
+				F9EB70B2267DA934001D252F /* AddRecipeView.storyboard in Resources */,
 				ECBEADB02678EB9200144217 /* EmptyStateTableViewCell.xib in Resources */,
 				EC78203E267C4D0F00960C42 /* SubmitButtonTableViewCell.xib in Resources */,
 				ECBEADF9267912D800144217 /* TextTableViewCell.xib in Resources */,
@@ -319,6 +349,7 @@
 				C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */,
 				C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */,
 				C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */,
+				F95CB1FE268040D80065B523 /* ingProcTable.swift in Sources */,
 				ECBEAD902678566E00144217 /* ImageTableViewCell.swift in Sources */,
 				C652A673267DCB3600857884 /* Ingredient.swift in Sources */,
 				C652A671267DCB1800857884 /* Feedback.swift in Sources */,
@@ -328,15 +359,20 @@
 				ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */,
 				ECBEAE04267A48DA00144217 /* FeedbackDetailViewController.swift in Sources */,
 				ECBEADAF2678EB9200144217 /* EmptyStateTableViewCell.swift in Sources */,
+				F95CB1F726803FE80065B523 /* categoryPickerCell.swift in Sources */,
 				EC413AA3267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift in Sources */,
 				ECBEAD792676FC1500144217 /* RamenDetailViewController.swift in Sources */,
 				EC5A0F20267BA27E00DD8FB7 /* FeedbackCollectionViewCell.swift in Sources */,
+				F95CB1F9268040360065B523 /* servingPickerCell.swift in Sources */,
+				F95CB1FB2680407B0065B523 /* detailCell.swift in Sources */,
 				ECBEAD5A2676F45500144217 /* SceneDelegate.swift in Sources */,
 				C6406C662678F1ED004CDD65 /* Tag.swift in Sources */,
 				ECBEAD622676F45500144217 /* Ramenology_uikit.xcdatamodeld in Sources */,
 				C6F7D7C82677131200AF0DE2 /* UIView+Extended.swift in Sources */,
 				EC413AB0267AF238001FCC94 /* InputFeedbackViewController.swift in Sources */,
+				F95CB200268041030065B523 /* cookingPickerCell.swift in Sources */,
 				C638A6F5267848D2009386B0 /* CardViewCell.swift in Sources */,
+				F9EB70B4267DC83E001D252F /* AddRecipeViewController.swift in Sources */,
 				C6406C5726784AE5004CDD65 /* Ramen.swift in Sources */,
 				ECBEAD9826786E3C00144217 /* Extension+UIView.swift in Sources */,
 				C652A676267DCB5C00857884 /* Process.swift in Sources */,

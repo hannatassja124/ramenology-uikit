@@ -22,21 +22,19 @@
         <!--Ramen Detail View Controller-->
         <scene sceneID="Hwl-x0-p8n">
             <objects>
-                <exit id="5cY-zf-C2k" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwr-dR-Zvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RamenDetailView" id="2qy-0S-n70" customClass="RamenDetailViewController" customModule="Ramenology_uikit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7mo-KP-hIx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broth Mama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFP-wh-JpW">
-                                <rect key="frame" x="16" y="52" width="382" height="30.5"/>
+                                <rect key="frame" x="16" y="52" width="382" height="28"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ODD-fd-MbJ">
-                                <rect key="frame" x="16" y="321" width="382" height="50"/>
+                                <rect key="frame" x="16" y="318.5" width="382" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aG1-bx-pDe">
                                         <rect key="frame" x="0.0" y="0.0" width="181" height="50"/>
@@ -95,13 +93,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created: 10-02-2011" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGO-OS-VQw">
-                                <rect key="frame" x="240" y="98.5" width="158" height="20.5"/>
+                                <rect key="frame" x="240" y="96" width="158" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nk3-WX-tDO">
-                                <rect key="frame" x="16" y="431.5" width="382" height="32"/>
+                                <rect key="frame" x="16" y="429" width="382" height="32"/>
                                 <segments>
                                     <segment title="Feedback"/>
                                     <segment title="Ingredients"/>
@@ -112,7 +110,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io7-0J-KpL">
-                                <rect key="frame" x="16" y="387" width="63" height="20.5"/>
+                                <rect key="frame" x="16" y="384.5" width="63" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="PDU-UO-nXN"/>
                                 </constraints>
@@ -121,21 +119,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.resepramenmamasdaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryP-Fj-oAP">
-                                <rect key="frame" x="87" y="387" width="311" height="20.5"/>
+                                <rect key="frame" x="87" y="384.5" width="311" height="20.5"/>
                                 <color key="tintColor" red="1" green="0.40784313729999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.40784313729999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FSZ-2Z-pGb">
-                                <rect key="frame" x="16" y="486.5" width="382" height="328.5"/>
+                                <rect key="frame" x="16" y="484" width="382" height="331"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fV-Ha-xIs">
-                                <rect key="frame" x="18" y="98.5" width="56" height="24"/>
+                                <rect key="frame" x="18" y="96" width="56" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ib-vI-y9s">
-                                        <rect key="frame" x="13" y="4" width="30.5" height="16"/>
+                                        <rect key="frame" x="13.5" y="5" width="29.5" height="14"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -160,7 +158,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="broth" translatesAutoresizingMaskIntoConstraints="NO" id="X8G-yg-d8z">
-                                <rect key="frame" x="16" y="135" width="382" height="170"/>
+                                <rect key="frame" x="16" y="132.5" width="382" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="wTP-ls-QJW"/>
                                 </constraints>
@@ -234,6 +232,8 @@
                         <segue destination="1IP-Po-ouM" kind="show" identifier="inputFeedback" id="eCZ-pL-0dy"/>
                     </connections>
                 </viewController>
+                <exit id="5cY-zf-C2k" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwr-dR-Zvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="-244.41964285714283"/>
         </scene>
