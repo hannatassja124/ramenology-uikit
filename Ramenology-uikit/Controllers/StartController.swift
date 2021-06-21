@@ -17,6 +17,7 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
     // Data for the table
     var tags: [Tag] = []
     var cards: [Recipe] = []
+    var selectedRamen: Ramen?
     
     // Reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -74,6 +75,14 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
         tags = getTag(selected: selected)
         tagsCollectionView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let seguee = segue.identifier {
+            if seguee.elementsEqual("goToDetailRamen") , let controller = segue.destination as? RamenDetailViewController {
+                controller.ramenDetail = self.selectedRamen
+            }
+        }
+    }
 
 }
 
@@ -103,14 +112,8 @@ extension StartController: UITableViewDataSource {
 extension StartController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let selectedCard = cards[indexPath.row]
-//        
-//        let sb = UIStoryboard(name: "RamenDetailView", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "RamenDetailView") as! RamenDetailViewController
-//        vc.ramenDetail = selectedCard
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true)
-         performSegue(withIdentifier: "goToDetailRamen", sender: Any?.self)
+        self.selectedRamen = cards[indexPath.row]
+        performSegue(withIdentifier: "goToDetailRamen", sender: Any?.self)
     }
 }
 

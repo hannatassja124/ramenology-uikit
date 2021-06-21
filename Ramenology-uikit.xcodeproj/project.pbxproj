@@ -26,12 +26,13 @@
 		EC5A0F21267BA27E00DD8FB7 /* FeedbackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5A0F1F267BA27E00DD8FB7 /* FeedbackCollectionViewCell.xib */; };
 		EC78203D267C4D0F00960C42 /* SubmitButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78203B267C4D0F00960C42 /* SubmitButtonTableViewCell.swift */; };
 		EC78203E267C4D0F00960C42 /* SubmitButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC78203C267C4D0F00960C42 /* SubmitButtonTableViewCell.xib */; };
+		ECACE62C2680A8A500D33B8E /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECACE62A2680A8A500D33B8E /* TextTableViewCell.xib */; };
+		ECACE62D2680A8A500D33B8E /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACE62B2680A8A500D33B8E /* TextTableViewCell.swift */; };
 		ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD572676F45500144217 /* AppDelegate.swift */; };
 		ECBEAD5A2676F45500144217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD592676F45500144217 /* SceneDelegate.swift */; };
 		ECBEAD642676F45C00144217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD632676F45C00144217 /* Assets.xcassets */; };
 		ECBEAD672676F45C00144217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD652676F45C00144217 /* LaunchScreen.storyboard */; };
 		ECBEAD792676FC1500144217 /* RamenDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD782676FC1500144217 /* RamenDetailViewController.swift */; };
-		ECBEAD8B2678565C00144217 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD892678565C00144217 /* TextTableViewCell.swift */; };
 		ECBEAD902678566E00144217 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */; };
 		ECBEAD912678566E00144217 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */; };
 		ECBEAD9826786E3C00144217 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAD9726786E3C00144217 /* Extension+UIView.swift */; };
@@ -39,7 +40,6 @@
 		ECBEADB02678EB9200144217 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */; };
 		ECBEADF32679128C00144217 /* RamenDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADF22679128C00144217 /* RamenDetailView.storyboard */; };
 		ECBEADF6267912AE00144217 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADF5267912AE00144217 /* Start.storyboard */; };
-		ECBEADF9267912D800144217 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEADF8267912D800144217 /* TextTableViewCell.xib */; };
 		ECBEAE01267A48AD00144217 /* FeedbackDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAE00267A48AD00144217 /* FeedbackDetailView.storyboard */; };
 		ECBEAE04267A48DA00144217 /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */; };
 		ECBEAE08267A4DD300144217 /* FeedbackDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */; };
@@ -84,6 +84,8 @@
 		EC5A0F1F267BA27E00DD8FB7 /* FeedbackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackCollectionViewCell.xib; sourceTree = "<group>"; };
 		EC78203B267C4D0F00960C42 /* SubmitButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButtonTableViewCell.swift; sourceTree = "<group>"; };
 		EC78203C267C4D0F00960C42 /* SubmitButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitButtonTableViewCell.xib; sourceTree = "<group>"; };
+		ECACE62A2680A8A500D33B8E /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		ECACE62B2680A8A500D33B8E /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEAD542676F45500144217 /* Ramenology-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ramenology-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBEAD572676F45500144217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECBEAD592676F45500144217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +93,6 @@
 		ECBEAD662676F45C00144217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECBEAD682676F45C00144217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECBEAD782676FC1500144217 /* RamenDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenDetailViewController.swift; sourceTree = "<group>"; };
-		ECBEAD892678565C00144217 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		ECBEAD9726786E3C00144217 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		ECBEADAE2678EB9200144217 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
 		ECBEADF22679128C00144217 /* RamenDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RamenDetailView.storyboard; sourceTree = "<group>"; };
 		ECBEADF5267912AE00144217 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
-		ECBEADF8267912D800144217 /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		ECBEAE00267A48AD00144217 /* FeedbackDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackDetailView.storyboard; sourceTree = "<group>"; };
 		ECBEAE03267A48DA00144217 /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailViewController.swift; sourceTree = "<group>"; };
 		ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -213,8 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				ECBEADF22679128C00144217 /* RamenDetailView.storyboard */,
-				ECBEAD892678565C00144217 /* TextTableViewCell.swift */,
-				ECBEADF8267912D800144217 /* TextTableViewCell.xib */,
 				ECBEAD8E2678566D00144217 /* ImageTableViewCell.swift */,
 				ECBEAD8F2678566E00144217 /* ImageTableViewCell.xib */,
 				ECBEADAD2678EB9200144217 /* EmptyStateTableViewCell.swift */,
@@ -236,13 +234,15 @@
 		C6FDA51C267DA6C1006C377A /* InputFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				EC413AAC267AF200001FCC94 /* InputFeedbackView.storyboard */,
 				EC413AA1267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift */,
+				EC413AA2267AEA5C001FCC94 /* InputFeedbackTableViewCell.xib */,
 				EC5A0F1E267BA27E00DD8FB7 /* FeedbackCollectionViewCell.swift */,
 				EC5A0F1F267BA27E00DD8FB7 /* FeedbackCollectionViewCell.xib */,
-				EC413AA2267AEA5C001FCC94 /* InputFeedbackTableViewCell.xib */,
-				EC413AAC267AF200001FCC94 /* InputFeedbackView.storyboard */,
 				EC78203B267C4D0F00960C42 /* SubmitButtonTableViewCell.swift */,
 				EC78203C267C4D0F00960C42 /* SubmitButtonTableViewCell.xib */,
+				ECACE62B2680A8A500D33B8E /* TextTableViewCell.swift */,
+				ECACE62A2680A8A500D33B8E /* TextTableViewCell.xib */,
 			);
 			path = InputFeedback;
 			sourceTree = "<group>";
@@ -362,8 +362,8 @@
 				C6406C5A2678596E004CDD65 /* Merriweather-Regular.ttf in Resources */,
 				F9EB70B2267DA934001D252F /* AddRecipeView.storyboard in Resources */,
 				ECBEADB02678EB9200144217 /* EmptyStateTableViewCell.xib in Resources */,
+				ECACE62C2680A8A500D33B8E /* TextTableViewCell.xib in Resources */,
 				EC78203E267C4D0F00960C42 /* SubmitButtonTableViewCell.xib in Resources */,
-				ECBEADF9267912D800144217 /* TextTableViewCell.xib in Resources */,
 				EC5A0F21267BA27E00DD8FB7 /* FeedbackCollectionViewCell.xib in Resources */,
 				ECBEAE09267A4DD300144217 /* FeedbackDetailTableViewCell.xib in Resources */,
 			);
@@ -382,10 +382,10 @@
 				F95CB1FE268040D80065B523 /* ingProcTable.swift in Sources */,
 				ECBEAD902678566E00144217 /* ImageTableViewCell.swift in Sources */,
 				EFC5AFF42680F5C5002B1C85 /* Recipe+CoreDataProperties.swift in Sources */,
+				ECACE62D2680A8A500D33B8E /* TextTableViewCell.swift in Sources */,
 				C652A673267DCB3600857884 /* Ingredient.swift in Sources */,
 				C652A671267DCB1800857884 /* Feedback.swift in Sources */,
 				ECBEAE08267A4DD300144217 /* FeedbackDetailTableViewCell.swift in Sources */,
-				ECBEAD8B2678565C00144217 /* TextTableViewCell.swift in Sources */,
 				EC78203D267C4D0F00960C42 /* SubmitButtonTableViewCell.swift in Sources */,
 				EFC5AFEC2680F5C5002B1C85 /* Process+CoreDataProperties.swift in Sources */,
 				EFC5AFED2680F5C5002B1C85 /* Feedback+CoreDataClass.swift in Sources */,
