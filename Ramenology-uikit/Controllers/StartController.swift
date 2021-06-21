@@ -9,8 +9,8 @@ import UIKit
 
 class StartController: UIViewController, cardProtocols, tagsProtocols {
     
-    @IBOutlet weak var addButtonView: UIButton!
     @IBOutlet weak var cardTableView: UITableView!
+    @IBOutlet weak var subheadingLabel: UILabel!
     @IBOutlet weak var tagsCollectionView: UICollectionView!
     
     var tags: [Tag] = []
@@ -34,7 +34,18 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
     }
     
     func initAddButton() {
-        addButtonView.setTitleColor(.appRed, for: .normal)
+        subheadingLabel.textColor = .appGray
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Add",
+            style: .plain,
+            target: self,
+            action: #selector(performAdd(sender:))
+        )
+        //addButtonView.setTitleColor(.appRed, for: .normal)
+    }
+    
+    @objc func performAdd(sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "gotoAddRecipe", sender: Any?.self)
     }
     
     func initTag(selected: String){
