@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C638A6F5267848D2009386B0 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638A6F4267848D2009386B0 /* CardViewCell.swift */; };
-		C6406C5726784AE5004CDD65 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C5626784AE5004CDD65 /* Card.swift */; };
+		C6406C5726784AE5004CDD65 /* Ramen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C5626784AE5004CDD65 /* Ramen.swift */; };
 		C6406C5A2678596E004CDD65 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6406C592678596E004CDD65 /* Merriweather-Regular.ttf */; };
 		C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C5D267881DE004CDD65 /* UIColor+Style.swift */; };
 		C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */; };
 		C6406C662678F1ED004CDD65 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6406C652678F1ED004CDD65 /* Tag.swift */; };
+		C652A671267DCB1800857884 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652A670267DCB1800857884 /* Feedback.swift */; };
+		C652A673267DCB3600857884 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652A672267DCB3600857884 /* Ingredient.swift */; };
+		C652A676267DCB5C00857884 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652A675267DCB5C00857884 /* Process.swift */; };
 		C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7D7C42676FD9600AF0DE2 /* StartController.swift */; };
 		C6F7D7C82677131200AF0DE2 /* UIView+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7D7C72677131200AF0DE2 /* UIView+Extended.swift */; };
 		EC413AA3267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC413AA1267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift */; };
@@ -53,11 +56,14 @@
 
 /* Begin PBXFileReference section */
 		C638A6F4267848D2009386B0 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
-		C6406C5626784AE5004CDD65 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C6406C5626784AE5004CDD65 /* Ramen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramen.swift; sourceTree = "<group>"; };
 		C6406C592678596E004CDD65 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		C6406C5D267881DE004CDD65 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		C6406C632678B1F1004CDD65 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6406C652678F1ED004CDD65 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		C652A670267DCB1800857884 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		C652A672267DCB3600857884 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		C652A675267DCB5C00857884 /* Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
 		C6F7D7C42676FD9600AF0DE2 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		C6F7D7C72677131200AF0DE2 /* UIView+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extended.swift"; sourceTree = "<group>"; };
 		EC413AA1267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFeedbackTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,8 +150,11 @@
 		C6F7D7C32676FA1900AF0DE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C6406C5626784AE5004CDD65 /* Card.swift */,
+				C6406C5626784AE5004CDD65 /* Ramen.swift */,
 				C6406C652678F1ED004CDD65 /* Tag.swift */,
+				C652A670267DCB1800857884 /* Feedback.swift */,
+				C652A672267DCB3600857884 /* Ingredient.swift */,
+				C652A675267DCB5C00857884 /* Process.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,6 +351,8 @@
 				C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */,
 				F95CB1FE268040D80065B523 /* ingProcTable.swift in Sources */,
 				ECBEAD902678566E00144217 /* ImageTableViewCell.swift in Sources */,
+				C652A673267DCB3600857884 /* Ingredient.swift in Sources */,
+				C652A671267DCB1800857884 /* Feedback.swift in Sources */,
 				ECBEAE08267A4DD300144217 /* FeedbackDetailTableViewCell.swift in Sources */,
 				ECBEAD8B2678565C00144217 /* TextTableViewCell.swift in Sources */,
 				EC78203D267C4D0F00960C42 /* SubmitButtonTableViewCell.swift in Sources */,
@@ -361,9 +372,10 @@
 				EC413AB0267AF238001FCC94 /* InputFeedbackViewController.swift in Sources */,
 				F95CB200268041030065B523 /* cookingPickerCell.swift in Sources */,
 				C638A6F5267848D2009386B0 /* CardViewCell.swift in Sources */,
-				C6406C5726784AE5004CDD65 /* Card.swift in Sources */,
 				F9EB70B4267DC83E001D252F /* AddRecipeViewController.swift in Sources */,
+				C6406C5726784AE5004CDD65 /* Ramen.swift in Sources */,
 				ECBEAD9826786E3C00144217 /* Extension+UIView.swift in Sources */,
+				C652A676267DCB5C00857884 /* Process.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

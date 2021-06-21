@@ -19,7 +19,7 @@
                         <color key="tintColor" red="1" green="0.40784313729999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="llc-Sb-pun"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="aDS-ZI-bHo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y44-JE-i07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -196,7 +196,7 @@
                         <outlet property="addButtonView" destination="IsZ-dG-bgn" id="M0j-TL-Wfe"/>
                         <outlet property="cardTableView" destination="A4s-3z-Mep" id="CdM-Fb-AvA"/>
                         <outlet property="tagsCollectionView" destination="3vC-V2-Dfr" id="gyd-WL-zzE"/>
-                        <segue destination="JP7-rZ-1M2" kind="show" identifier="goToDetailRamen" id="gu6-0Y-sfH"/>
+                        <segue destination="JP7-rZ-1M2" kind="show" identifier="goToDetailRamen" id="mje-79-1nI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
