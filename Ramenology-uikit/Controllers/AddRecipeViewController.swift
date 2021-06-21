@@ -12,6 +12,30 @@ enum Segment: String {
     case process
 }
 
+class recipeNameCell: UITableViewCell {
+    
+    @IBOutlet weak var recipeNameText: UITextField!
+    
+    var delegate: setValueDelegate?
+    
+    @IBAction func getVal(_ sender: Any) {
+        self.delegate?.setCategory(fieldName: "recipeName", value: recipeNameText.text!)
+    }
+}
+
+class sourceLinkCell: UITableViewCell {
+    
+    @IBOutlet weak var sourceLinkText: UITextField!
+    
+    var delegate: setValueDelegate?
+    
+        @IBAction func getVal(_ sender: Any) {
+            self.delegate?.setCategory(fieldName: "linkSource", value: sourceLinkText.text!)
+        }
+    
+    
+}
+
 class AddRecipeViewController: UIViewController, setValueDelegate, deleteCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +50,8 @@ class AddRecipeViewController: UIViewController, setValueDelegate, deleteCellDel
     var category = "Soup"
     var serving = "1"
     var cooking = "0 hours 1 minutes"
+    var recipeName = ""
+    var linkSource = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +63,11 @@ class AddRecipeViewController: UIViewController, setValueDelegate, deleteCellDel
     }
     
     @objc func buttonClicked(sender: UIBarButtonItem) {
-            
+        print(recipeName)
+        print(linkSource)
+        print(category)
+        print(cooking)
+        print(serving)
     }
     
     
@@ -70,6 +100,10 @@ class AddRecipeViewController: UIViewController, setValueDelegate, deleteCellDel
         } else if fieldName == "serving" {
             serving = value
             tableView.reloadRows(at: [IndexPath(row: 6, section: 1)], with: .none)
+        } else if fieldName == "recipeName"{
+            recipeName = value
+        } else if fieldName == "linkSource"{
+            linkSource = value
         }
     }
     
@@ -123,11 +157,12 @@ extension AddRecipeViewController:UITableViewDataSource {
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
             return cell
         } else if indexPath.section == 1 && indexPath.row == 0{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "recipeName", for: indexPath)
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "recipeName", for: indexPath) as! recipeNameCell
+            cell.delegate = self
             return cell
         } else if indexPath.section == 1 && indexPath.row == 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "linkSource", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "linkSource", for: indexPath) as! sourceLinkCell
+            cell.delegate = self
             return cell
         } else if indexPath.section == 1 && indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath) as! detailCell

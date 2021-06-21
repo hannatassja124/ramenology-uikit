@@ -47,7 +47,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="recipeName" id="7V7-8F-Kw5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="recipeName" id="7V7-8F-Kw5" customClass="recipeNameCell" customModule="Ramenology_uikit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="242.5" width="414" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7V7-8F-Kw5" id="FeZ-RH-mCg">
@@ -58,6 +58,9 @@
                                                     <rect key="frame" x="16" y="11" width="382" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="getVal:" destination="7V7-8F-Kw5" eventType="editingDidEnd" id="rF5-ny-ND4"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -68,8 +71,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="recipeNameText" destination="8Fw-UU-HMu" id="MOG-oY-2iO"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="linkSource" id="APF-vl-K2C">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="linkSource" id="APF-vl-K2C" customClass="sourceLinkCell" customModule="Ramenology_uikit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="287" width="414" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="APF-vl-K2C" id="cpR-sA-WqQ">
@@ -80,6 +86,9 @@
                                                     <rect key="frame" x="16" y="11" width="382" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="getVal:" destination="APF-vl-K2C" eventType="editingDidEnd" id="8Xo-px-6MI"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -89,6 +98,9 @@
                                                 <constraint firstItem="b0v-W9-ORl" firstAttribute="leading" secondItem="cpR-sA-WqQ" secondAttribute="leading" constant="16" id="kYP-nQ-5XL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="sourceLinkText" destination="b0v-W9-ORl" id="3AL-3L-J2r"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="category" textLabel="06M-Fo-Ro9" detailTextLabel="Sa5-sS-xQr" style="IBUITableViewCellStyleValue1" id="Mqp-ge-lRf" customClass="detailCell" customModule="Ramenology_uikit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="331.5" width="414" height="43.5"/>
