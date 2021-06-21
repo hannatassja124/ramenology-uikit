@@ -25,7 +25,7 @@ class AddRecipeViewController: UIViewController, setValueDelegate, deleteCellDel
     
     var category = "Soup"
     var serving = "1"
-    var cooking = "0 hours 1 minute"
+    var cooking = "0 hours 1 minutes"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -206,10 +206,14 @@ extension AddRecipeViewController:UITableViewDataSource {
         var tempHeight:CGFloat = 44
         
         if indexPath.section == 0 && indexPath.row == 0 {
-            tempHeight = 200
+            tempHeight = 218
         }
         if indexPath.section == 2 && indexPath.row == 1 {
             tempHeight = 230.0
+        }
+        
+        if indexPath.section == 2 && indexPath.row == 0 {
+            tempHeight = 56.0
         }
         if indexPath.section == 3 && indexPath.row == 0 {
             tempHeight = 50
