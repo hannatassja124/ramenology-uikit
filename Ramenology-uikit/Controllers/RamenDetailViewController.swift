@@ -38,7 +38,7 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.register(UINib.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")
         self.tableView.register(UINib.init(nibName: "TextTableViewCell", bundle: .main), forCellReuseIdentifier: "TextTableViewCell")
         self.tableView.register(UINib.init(nibName: "EmptyStateTableViewCell", bundle: .main), forCellReuseIdentifier: "EmptyStateTableViewCell")
-        initValue()
+//        initValue()
     }
     
     func initValue() {

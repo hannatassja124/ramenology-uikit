@@ -70,14 +70,14 @@ extension StartController: UITableViewDataSource {
 extension StartController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let selectedCard = cards[indexPath.row]
-        
-        let sb = UIStoryboard(name: "RamenDetailView", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "RamenDetailView") as! RamenDetailViewController
-        vc.ramenDetail = selectedCard
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
-        // performSegue(withIdentifier: "goToDetailRamen", sender: Any?.self)
+//        let selectedCard = cards[indexPath.row]
+//        
+//        let sb = UIStoryboard(name: "RamenDetailView", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "RamenDetailView") as! RamenDetailViewController
+//        vc.ramenDetail = selectedCard
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
+         performSegue(withIdentifier: "goToDetailRamen", sender: Any?.self)
     }
 }
 
