@@ -7,88 +7,37 @@
 
 import UIKit
 
-class categoryPickerCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource {
-
-    
-    @IBOutlet weak var categoryPicker: UIPickerView!
-
-    var categories:Array<String>!
-    override func awakeFromNib() {
-        self.categories = Array<String>()
-        self.categoryPicker.delegate = self
-        self.categoryPicker.dataSource = self
-        super.awakeFromNib()
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(categories[row])"
-    }
-    
-}
-
-class servingPickerCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    
-    @IBOutlet weak var servingPicker: UIPickerView!
-    
-    var totalServing:Array<Int>!
-    override func awakeFromNib() {
-        self.totalServing = Array<Int>()
-        self.servingPicker.delegate = self
-        self.servingPicker.dataSource = self
-        super.awakeFromNib()
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return totalServing.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(totalServing[row])"
-    }
-    
-    
-}
-
 enum Segment: String {
     case ingredient
     case process
 }
 
-class AddRecipeViewController: UIViewController {
+class AddRecipeViewController: UIViewController, setValueDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var label: UILabel!
     
     var categories = ["Soup", "Broth", "Topping", "Tare"]
     var number:[Int] = Array(1...20)
     
     var selectedSteps : Segment = .ingredient
-    var testIng = ["Ing 1", "Ing 2", "Ing 3", "Ing 4"]
-    var testProc = ["test 1", "test 2", "test 3", "test 4"]
+    var testIng:[String] = []
+    var testProc:[String] = []
+    
+    var category = "Soup"
+    var serving = "1"
+    var cooking = "0 hours 1 minute"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         
-        //self.categoryPicker.delegate = self
-        //self.categoryPicker.dataSource = self
     }
 
+    @IBAction func addCell(_ sender: Any) {
+        self.tableView.reloadData()
+    }
+    
     @IBAction func segmentIngProc(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             self.selectedSteps = .ingredient
@@ -98,6 +47,23 @@ class AddRecipeViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    func setCategory(fieldName: String, value : String){
+        if fieldName == "category"{
+            category = value
+            tableView.reloadRows(at: [IndexPath(row: 2, section: 1)], with: .none)
+        } else if fieldName == "cooking" {
+            cooking = value
+            tableView.reloadRows(at: [IndexPath(row: 4, section: 1)], with: .none)
+        } else if fieldName == "serving" {
+            serving = value
+            tableView.reloadRows(at: [IndexPath(row: 6, section: 1)], with: .none)
+        }
+    }
+    
+}
+
+protocol setValueDelegate: AnyObject {
+    func setCategory(fieldName: String, value: String)
 }
 
 extension AddRecipeViewController: UITableViewDelegate {
@@ -107,19 +73,18 @@ extension AddRecipeViewController: UITableViewDelegate {
 extension AddRecipeViewController:UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+
         return 4
+
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         if (section == 0){
             return 1
         } else if (section == 1){
             return 8
         } else if (section == 2){
-            if self.selectedSteps == .ingredient {
-                return testIng.count + 1
-            } else {
-                return testProc.count + 1
-            }
+            return 2
         } else if (section == 3) {
             return 1
         } else {
@@ -130,54 +95,66 @@ extension AddRecipeViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 && indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "imageView", for: indexPath)
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
             return cell
         } else if indexPath.section == 1 && indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "recipeName", for: indexPath)
+            
             return cell
         } else if indexPath.section == 1 && indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "linkSource", for: indexPath)
             return cell
         } else if indexPath.section == 1 && indexPath.row == 2{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath) as! detailCell
+            cell.setContent(titleRight: "Category", titleLeft: category)
             return cell
         } else if indexPath.section == 1 && indexPath.row == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "pickerCategory", for: indexPath) as! categoryPickerCell
             cell.categories = categories
+            cell.delegate = self
             cell.isHidden = true
             cell.categoryPicker.reloadAllComponents();
             return cell
         } else if indexPath.section == 1 && indexPath.row == 4{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cookingTime", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath) as! detailCell
+            cell.setContent(titleRight: "Cooking Time", titleLeft: cooking)
             return cell
         } else if indexPath.section == 1 && indexPath.row == 5{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cookingPicker", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cookingPicker", for: indexPath) as! cookingPickerCell
             cell.isHidden = true
+            cell.delegate = self
             return cell
         } else if indexPath.section == 1 && indexPath.row == 6{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "totalServing", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath) as! detailCell
+            cell.setContent(titleRight: "Total Serving", titleLeft: "\(serving) servings")
             return cell
         } else if indexPath.section == 1 && indexPath.row == 7{
             let cell = tableView.dequeueReusableCell(withIdentifier: "servingPicker", for: indexPath) as! servingPickerCell
             cell.totalServing = number
+            cell.delegate = self
             cell.isHidden = true
             cell.servingPicker.reloadAllComponents();
             return cell
         } else if indexPath.section == 2 && indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "segmentIngProc", for: indexPath)
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
             return cell
-        } else if indexPath.section == 2 && indexPath.row == 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            if self.selectedSteps == .ingredient {
-                cell.textLabel?.text =  self.testIng[indexPath.row]
+        } else if indexPath.section == 2 && indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ingProcTableCell
+            if selectedSteps == .ingredient {
+                cell.dataTable = testIng
             } else {
-                cell.textLabel?.text =  self.testProc[indexPath.row]
+                cell.dataTable = testProc
             }
+            cell.tableView.reloadData()
             return cell
         } else if indexPath.section == 3 && indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "addButton", for: indexPath)
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
             return cell
         }
     }
@@ -203,10 +180,16 @@ extension AddRecipeViewController:UITableViewDataSource {
         var tempHeight:CGFloat = 44
         
         if indexPath.section == 0 && indexPath.row == 0 {
-            tempHeight = 168.0
+            tempHeight = 200
+        }
+        if indexPath.section == 2 && indexPath.row == 1 {
+            tempHeight = 230.0
+        }
+        if indexPath.section == 3 && indexPath.row == 0 {
+            tempHeight = 50
         }
         
-        if cookingTrue || servingTrue || categoryTrue{
+        if cookingTrue || servingTrue || categoryTrue {
             tempHeight = 0.0
         } else if cookingFalse || servingFalse || categoryFalse {
             tempHeight = 147.0
