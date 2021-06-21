@@ -14,18 +14,30 @@ class FeedbackCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var button: UIButton!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    
+    
     func select() {
         self.isButtonSelected = !self.isButtonSelected
         if (self.isButtonSelected) {
-            button.tintColor = .red
-            button.backgroundColor = .blue
+            button.tintColor = .appRed
+            button.backgroundColor = .appRed
+            button.setTitleColor(.appWhite, for: .normal)
+        } else {
+            button.tintColor = .appRed
+            button.backgroundColor = .appWhite
+            button.setTitleColor(.appRed, for: .normal)
         }
         
     }
 
+    @IBAction func selectItem(_ sender: Any) {
+        self.select()
+        
+    }
 }

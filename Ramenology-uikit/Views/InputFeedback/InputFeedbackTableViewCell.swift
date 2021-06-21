@@ -14,40 +14,69 @@ class InputFeedbackTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
     @IBOutlet weak var rating3: UIButton!
     @IBOutlet weak var rating4: UIButton!
     @IBOutlet weak var rating5: UIButton!
-    var selectedStar: UIImage = #imageLiteral(resourceName: "filled-star")
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var desc: UITextView!
+    
+    
+    var selectedStar: UIImage = UIImage(named: "filled-star")!
     var ratingImage: UIImage = #imageLiteral(resourceName: "Star")
     var selectedRating = 0
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    var feedbackItem: String!
+    var textureOption: [String] = ["Heavy", "Thin", "Clear", "Merky", "Rating"]
+    var richnessOption: [String] = ["None", "Light", "Medium", "Rich", "Extra Rich"]
+    var dashiOption: [String] = ["Light", "Medium", "High"]
+    var tasteOption: [String] = ["Salty", "Sweet", "Sour", "Savory", "Bitter"]
+    var selectedOption: [String]!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("input feedbackk bung")
         let nibName = UINib(nibName: "FeedbackCollectionViewCell", bundle:nil)
         myCollectionView.register(nibName, forCellWithReuseIdentifier: "FeedbackCollectionViewCell")
-        self.myCollectionView.dataSource = self
-
+        self.initCollectionView()
+        self.drawRating()
     }
     
-    func callDatasource() {
+    
+    func drawRating() {
+        self.rating.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+        self.rating2.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+        self.rating3.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+        self.rating4.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+        self.rating5.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+    }
+    
+    func initCollectionView() {
         self.myCollectionView.dataSource = self
+        self.myCollectionView.delegate = self
+    }
+    func getOption() {
+        if (self.feedbackItem == "Texture") {
+            self.selectedOption = self.textureOption
+        }
+        if (self.feedbackItem == "Richness") {
+            self.selectedOption = self.richnessOption
+        }
+        if (self.feedbackItem == "Dashi") {
+            self.selectedOption = self.dashiOption
+        }
+        if (self.feedbackItem == "Taste") {
+            self.selectedOption = self.tasteOption
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return (self.selectedOption != nil) ? self.selectedOption.count : 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:FeedbackCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeedbackCollectionViewCell", for: indexPath)  as! FeedbackCollectionViewCell
-        
-        
+        cell.button.setTitle(self.selectedOption[indexPath.row], for: .normal)
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("select")
-    }
-
     
     @IBAction func ratingSelected(_ sender: Any) {
         self.selectedRating = 1
@@ -93,5 +122,4 @@ class InputFeedbackTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
         self.rating4.setImage(selectedStar, for: .normal)
         self.rating5.setImage(selectedStar, for: .normal)
     }
-    
 }

@@ -105,10 +105,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-sM-wXW">
-                                <rect key="frame" x="16" y="155" width="288" height="38"/>
+                                <rect key="frame" x="16" y="155" width="288" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="5vw-bQ-RaE"/>
+                                    <constraint firstAttribute="height" constant="44" id="5vw-bQ-RaE"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="9" id="CQh-Wo-hWg">
                                     <size key="itemSize" width="128" height="128"/>
@@ -118,14 +118,14 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to Improve (Opsional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddp-A4-TtI">
-                                <rect key="frame" x="66" y="217" width="188" height="18"/>
+                                <rect key="frame" x="66" y="223" width="188" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MPZ-gy-bg3">
-                                <rect key="frame" x="16" y="251" width="288" height="150"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <rect key="frame" x="16" y="257" width="288" height="150"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="wnP-e2-eCy"/>
                                 </constraints>
@@ -138,15 +138,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hd0-54-ZL1">
+                                <rect key="frame" x="24" y="417" width="272" height="1"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="V3f-Yu-hj8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UNl-nl-0XO" firstAttribute="top" secondItem="fff-K3-24P" secondAttribute="bottom" constant="16" id="0nL-W0-oPa"/>
+                            <constraint firstItem="Hd0-54-ZL1" firstAttribute="leading" secondItem="9Ck-fl-a2d" secondAttribute="leading" constant="24" id="7Ih-o3-VYL"/>
                             <constraint firstItem="ddp-A4-TtI" firstAttribute="top" secondItem="cgw-sM-wXW" secondAttribute="bottom" constant="24" id="DAU-Bf-Djq"/>
+                            <constraint firstAttribute="trailing" secondItem="Hd0-54-ZL1" secondAttribute="trailing" constant="24" id="DM0-IN-Yp6"/>
                             <constraint firstItem="4Ve-GW-zKu" firstAttribute="top" secondItem="UNl-nl-0XO" secondAttribute="bottom" constant="24" id="OzE-B3-sll"/>
                             <constraint firstItem="UNl-nl-0XO" firstAttribute="centerX" secondItem="9Ck-fl-a2d" secondAttribute="centerX" id="Q6d-fo-kqP"/>
                             <constraint firstItem="4Ve-GW-zKu" firstAttribute="centerX" secondItem="9Ck-fl-a2d" secondAttribute="centerX" id="R90-8V-WEM"/>
                             <constraint firstItem="MPZ-gy-bg3" firstAttribute="leading" secondItem="9Ck-fl-a2d" secondAttribute="leading" constant="16" id="RD4-KR-BtE"/>
+                            <constraint firstAttribute="bottom" secondItem="Hd0-54-ZL1" secondAttribute="bottom" constant="-4" id="T3v-dB-LLj"/>
                             <constraint firstItem="6Vd-FR-GMl" firstAttribute="centerX" secondItem="9Ck-fl-a2d" secondAttribute="centerX" id="ZJh-J6-0m6"/>
                             <constraint firstAttribute="height" constant="414" id="aUH-m4-reR"/>
                             <constraint firstItem="ddp-A4-TtI" firstAttribute="centerX" secondItem="9Ck-fl-a2d" secondAttribute="centerX" id="ah3-g3-T6r"/>
@@ -163,19 +178,21 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="9Ck-fl-a2d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="M9l-jc-jGM"/>
-                    <constraint firstAttribute="bottom" secondItem="9Ck-fl-a2d" secondAttribute="bottom" id="S02-US-JNt"/>
+                    <constraint firstAttribute="bottom" secondItem="9Ck-fl-a2d" secondAttribute="bottom" constant="8" id="S02-US-JNt"/>
                     <constraint firstItem="9Ck-fl-a2d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="WF6-3c-Bek"/>
                     <constraint firstAttribute="trailing" secondItem="9Ck-fl-a2d" secondAttribute="trailing" id="qXH-Lf-jmQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="desc" destination="MPZ-gy-bg3" id="aHs-Ex-G2D"/>
                 <outlet property="myCollectionView" destination="cgw-sM-wXW" id="4Gc-Jk-Idx"/>
                 <outlet property="rating" destination="bi5-W8-acV" id="Yiq-qY-uVR"/>
                 <outlet property="rating2" destination="mkX-Sl-DVC" id="AOi-xU-Ldc"/>
                 <outlet property="rating3" destination="IZ6-lx-Lxt" id="puo-7v-mzB"/>
                 <outlet property="rating4" destination="jvf-wb-dcE" id="S0h-yx-xZi"/>
                 <outlet property="rating5" destination="N2T-Bc-TBE" id="hRK-SY-7W9"/>
+                <outlet property="title" destination="6Vd-FR-GMl" id="M5G-ed-A0Z"/>
             </connections>
             <point key="canvasLocation" x="18.840579710144929" y="247.76785714285714"/>
         </tableViewCell>
@@ -188,8 +205,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -15,7 +15,8 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
     var ingredients: [String] = ["1 Kg, Chicken backs","900g, Chicken wings","500g Chicken feet","1, Onion, whole and quartered", "10-15, Garlic cloves,  minced", "3, Carrots, peeled", "3 tbsp, Mirin", "1/4 cup, Sake"]
     var steps: [String] = ["1. Add the chicken to a stockpot", "2. Bring the soup up to a boil briefly, skim any scum. Hold here for 5-10 minutes, or until scum subsides.", "3. Reduce heat back down to below simmer (around  88 °C/190 °F), hold for 5 hours."]
     // enable this to see empty state
-    var feedback: [String] = ["Feedback A", "Feedback B"]
+    var feedback: [Feedback]!
+    var selectedFeedback: Feedback!
     //    var feedback: [String] = []
     
     
@@ -33,12 +34,28 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getFeedback()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UINib.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")
         self.tableView.register(UINib.init(nibName: "TextTableViewCell", bundle: .main), forCellReuseIdentifier: "TextTableViewCell")
         self.tableView.register(UINib.init(nibName: "EmptyStateTableViewCell", bundle: .main), forCellReuseIdentifier: "EmptyStateTableViewCell")
-//        initValue()
+        self.initValue()
+    }
+    
+    func getFeedback() {
+        let detailFeedback1: [FeedbackDetail] = [
+            FeedbackDetail(id: 1, title: "Texture - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level"),
+            FeedbackDetail(id: 2, title: "Richness - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level")
+        ]
+        let detailFeedback2: [FeedbackDetail] = [
+            FeedbackDetail(id: 1, title: "Texture - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level"),
+            FeedbackDetail(id: 2, title: "Richness - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level"),
+            FeedbackDetail(id: 2, title: "Dashi - “Chosen”", rating: 4, description: "- (no feedback)", level: "level")
+        ]
+        self.feedback = [Feedback(id: 1, name: "Feedback 1", tag: .broth, created: "10-06-2021", feedbackDetail: detailFeedback1), Feedback(id: 1, name: "Feedback 2", tag: .broth, created: "10-06-2022", feedbackDetail: detailFeedback2)]
+        
+        
     }
     
     func initValue() {
@@ -57,6 +74,14 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let seguee = segue.identifier {
+            if seguee.elementsEqual("goToDetailFeedback") , let controller = segue.destination as? FeedbackDetailViewController {
+                controller.feedback = self.selectedFeedback
+            }
+        }
+    }
+    
     @IBAction func addFeedback(_ sender: Any) {
         performSegue(withIdentifier: "inputFeedback", sender: Any?.self)
     }
@@ -67,13 +92,14 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
         } else if  (self.selectedStep == .cookingSteps) {
             return self.steps.count
         } else if (self.selectedStep == .feedback) {
-            return self.feedback.count == 0 ? 1 : self.feedback.count
+            return self.feedback.count
         }
         return 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (self.selectedStep == .feedback) {
+            self.selectedFeedback = self.feedback[indexPath.row]
             performSegue(withIdentifier: "goToDetailFeedback", sender: Any?.self)
         }
     }
@@ -81,7 +107,6 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
         if (self.selectedStep == .ingredients) {
             let cell:TextTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TextTableViewCell", for: indexPath) as! TextTableViewCell
             cell.selectionStyle = .none
-            print(indexPath.row)
             cell.label.text =  self.ingredients[indexPath.row]
             return cell
             
@@ -100,20 +125,10 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
             }
             let cell:ImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
             cell.selectionStyle = .none
-            cell.imageLabel.text = self.feedback[indexPath.row]
+            cell.imageLabel.text = self.feedback[indexPath.row].created
             return cell 
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
