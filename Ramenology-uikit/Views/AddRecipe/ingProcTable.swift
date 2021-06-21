@@ -47,6 +47,20 @@ class ingProcTableCell: UITableViewCell, UITableViewDelegate, UITableViewDataSou
             }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
+    
+    func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+      // for iOS13, iOS14
+      if let swipeContainerView = tableView.subviews.first(where: { String(describing: type(of: $0)) == "_UITableViewCellSwipeContainerView" }) {
+        if let swipeActionPullView = swipeContainerView.subviews.first, String(describing: type(of: swipeActionPullView)) == "UISwipeActionPullView" {
+          swipeActionPullView.frame.size.height -= 12
+        }
+      }
+    }
+
+    
     
     
     
