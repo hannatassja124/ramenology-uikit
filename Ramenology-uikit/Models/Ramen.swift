@@ -17,11 +17,11 @@ class Ramen {
     var duration: Int?
     var serving: Int?
     var source: String?
-    var feedbacks: [Feedback]?
-    var ingredients: [Ingredient]?
-    var process: [Process]?
+    var feedbacks: [Feedbacks]?
+    var ingredients: [Ingredients]?
+    var process: [Processes]?
     
-    init(id: Int, image: UIImage, tags: String, name: String, created: Date, duration: Int, serving: Int, source: String, feedbacks: [Feedback], ingredients: [Ingredient], process: [Process]) {
+    init(id: Int, image: UIImage, tags: String, name: String, created: Date, duration: Int, serving: Int, source: String, feedbacks: [Feedbacks], ingredients: [Ingredients], process: [Processes]) {
         self.id = id
         self.image = image
         self.tags  = tags

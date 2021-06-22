@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class StartController: UIViewController, cardProtocols, tagsProtocols {
     
@@ -13,9 +14,13 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
     @IBOutlet weak var subheadingLabel: UILabel!
     @IBOutlet weak var tagsCollectionView: UICollectionView!
     
+    // Data for the table
     var tags: [Tag] = []
-    var cards: [Ramen] = []
-    var selectedRamen: Ramen?
+    var cards: [Recipe] = []
+    var selectedRamen: Recipe?
+    
+    // Reference to managed object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +35,30 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
     }
     
     func initCard(tags: String) {
-        cards = getCard(tags: tags)
-        cardTableView.reloadData()
+        // Fetch the data from Core Data to disply in the tableview
+        do {
+            let request = Recipe.fetchRequest() as NSFetchRequest<Recipe>
+            
+            // Set the filtering on the request
+            let tempTag = tags.trimmingCharacters(in: .whitespacesAndNewlines)
+//            if tempTag != "" || tempTag != tag_enum.all.rawValue {
+                let filter = NSPredicate(format: "%K = %@", "category", tags)
+                request.predicate = filter
+//            }
+            
+            print(tags)
+            print(tempTag)
+            
+            self.cards = try context.fetch(request)
+            
+            DispatchQueue.main.async {
+                self.cardTableView.reloadData()
+            }
+        } catch {
+            
+        }
+        
+        self.cardTableView.reloadData()
     }
     
     func initAddButton() {

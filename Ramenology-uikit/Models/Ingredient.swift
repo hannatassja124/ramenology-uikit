@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Ingredient {
+class Ingredients {
     var id: Int
     var amount: Int
     var measurement: measurement_enum

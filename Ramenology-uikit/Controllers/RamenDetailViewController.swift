@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var ramenDetail: Ramen?
+    var ramenDetail: Recipe?
     
     var selectedStep: Steps = .feedback
     var ingredients: [String] = ["1 Kg, Chicken backs","900g, Chicken wings","500g Chicken feet","1, Onion, whole and quartered", "10-15, Garlic cloves,  minced", "3, Carrots, peeled", "3 tbsp, Mirin", "1/4 cup, Sake"]
@@ -44,23 +45,20 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func getFeedback() {
-        let detailFeedback1: [FeedbackDetail] = [
-            FeedbackDetail(id: 1, title: "Texture - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level"),
-            FeedbackDetail(id: 2, title: "Richness - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level")
-        ]
-        let detailFeedback2: [FeedbackDetail] = [
-            FeedbackDetail(id: 1, title: "Texture - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level"),
-            FeedbackDetail(id: 2, title: "Richness - “Chosen”", rating: 4, description: "Feedback Input Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, gravida est ullamcorper est, sit adipiscing porttitor vel at. Viverra eu id consectetur adipiscing.", level: "level"),
-            FeedbackDetail(id: 2, title: "Dashi - “Chosen”", rating: 4, description: "- (no feedback)", level: "level")
-        ]
-        self.feedback = [Feedback(id: 1, name: "Feedback 1", tag: .broth, created: "10-06-2021", feedbackDetail: detailFeedback1), Feedback(id: 1, name: "Feedback 2", tag: .broth, created: "10-06-2022", feedbackDetail: detailFeedback2)]
-        
-        
+        // Fetch the data from Core Data to disply in the tableview
+        do {
+            let feedbacks = self.ramenDetail?.feedbacks!.allObjects as! [Feedback]
+            self.feedback = feedbacks
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func initValue() {
-        ramenTitle.text = ramenDetail!.name
-        category.text = ramenDetail!.tags
+        ramenTitle.text = ramenDetail!.recipe_name
+        category.text = ramenDetail!.category
     }
     
     @IBAction func didChangeSegment2(_ sender: UISegmentedControl) {
@@ -125,7 +123,13 @@ class RamenDetailViewController: UIViewController, UITableViewDelegate, UITableV
             }
             let cell:ImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
             cell.selectionStyle = .none
-            cell.imageLabel.text = self.feedback[indexPath.row].created
+            
+            // Create Date Formatter
+            let dateFormatter = DateFormatter()
+            // Set Date Format
+            dateFormatter.dateFormat = "YY/MM/dd"
+            // Convert Date to String
+            cell.imageLabel.text = dateFormatter.string(from: self.feedback[indexPath.row].created_at!)
             return cell 
         }
     }

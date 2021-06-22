@@ -25,21 +25,22 @@ class FeedbackDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func drawData() {
-        self.category.text = self.feedback.tag.rawValue
-        self.ramenTitle.text = self.feedback.name
-        self.createdDate.text = "Created : \(self.feedback.created)"
+        self.category.text = self.feedback.feedback_category_type
+        self.ramenTitle.text = self.feedback.feedback_name
+        self.createdDate.text = "Created : \(self.feedback.created_at!)"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.feedback.feedbackDetail.count
+        return self.feedback.feedback_details!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:FeedbackDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FeedbackDetailTableViewCell", for: indexPath) as! FeedbackDetailTableViewCell
         cell.selectionStyle = .none
-        cell.title.text = self.feedback.feedbackDetail[indexPath.row].title
-        cell.rating.text = "Rating \(self.feedback.feedbackDetail[indexPath.row].rating) /5"
-        cell.desc.text = self.feedback.feedbackDetail[indexPath.row].description
+        let feedbackDetail = self.feedback.feedback_details!.allObjects as! [FeedbackDetail]
+        cell.title.text = feedbackDetail[indexPath.row].feedback_detail_name
+        cell.rating.text = "Rating \(feedbackDetail[indexPath.row].feedback_detail_rating!) /5"
+        cell.desc.text = feedbackDetail[indexPath.row].feedback_detail_description
         return cell
     }
     

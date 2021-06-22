@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class InputFeedbackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var listFeedback: [FeedbackDetail]!
     
+    // Reference to managed object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,22 +37,27 @@ class InputFeedbackViewController: UIViewController, UITableViewDelegate, UITabl
         } else {
             let cell:InputFeedbackTableViewCell = tableView.dequeueReusableCell(withIdentifier: "InputFeedbackTableViewCell", for: indexPath) as! InputFeedbackTableViewCell
             cell.selectionStyle = .none
-            cell.desc.text = self.listFeedback[indexPath.row].description
-            cell.title.text = self.listFeedback[indexPath.row].title
-            cell.feedbackItem = self.listFeedback[indexPath.row].title
+            cell.desc.text = self.listFeedback[indexPath.row].feedback_detail_description
+            cell.title.text = self.listFeedback[indexPath.row].feedback_detail_name
+            cell.feedbackItem = self.listFeedback[indexPath.row].feedback_detail_name
             cell.getOption()
             return cell
         }
     }
     
     func getFeedback() {
-        let tempFeedback: [FeedbackDetail] = [
-            FeedbackDetail(id: 1, title: "Texture", rating: 0, description: "", level: ""),
-            FeedbackDetail(id: 2, title: "Richness", rating: 0, description: "", level: ""),
-            FeedbackDetail(id: 3, title: "Dashi", rating: 0, description: "", level: ""),
-            FeedbackDetail(id: 4, title: "Taste", rating: 0, description: "", level: "")
-        ]
-        self.listFeedback = tempFeedback
+        // Fetch the data from Core Data to disply in the tableview
+        do {
+            let request = FeedbackDetail.fetchRequest() as NSFetchRequest<FeedbackDetail>
+            
+            self.listFeedback = try context.fetch(request)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        } catch {
+            
+        }
     }
     
 
