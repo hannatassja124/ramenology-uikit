@@ -45,16 +45,16 @@
 		ECBEAE08267A4DD300144217 /* FeedbackDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */; };
 		ECBEAE09267A4DD300144217 /* FeedbackDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */; };
 		EFC5AF302680B584002B1C85 /* Ramenology_uikit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AF2E2680B584002B1C85 /* Ramenology_uikit.xcdatamodeld */; };
-		EFC5AFEB2680F5C5002B1C85 /* Process+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE12680F5C5002B1C85 /* Process+CoreDataClass.swift */; };
-		EFC5AFEC2680F5C5002B1C85 /* Process+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE22680F5C5002B1C85 /* Process+CoreDataProperties.swift */; };
-		EFC5AFED2680F5C5002B1C85 /* Feedback+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE32680F5C5002B1C85 /* Feedback+CoreDataClass.swift */; };
-		EFC5AFEE2680F5C5002B1C85 /* Feedback+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE42680F5C5002B1C85 /* Feedback+CoreDataProperties.swift */; };
-		EFC5AFEF2680F5C5002B1C85 /* FeedbackDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE52680F5C5002B1C85 /* FeedbackDetail+CoreDataClass.swift */; };
-		EFC5AFF02680F5C5002B1C85 /* FeedbackDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE62680F5C5002B1C85 /* FeedbackDetail+CoreDataProperties.swift */; };
-		EFC5AFF12680F5C5002B1C85 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE72680F5C5002B1C85 /* Ingredient+CoreDataClass.swift */; };
-		EFC5AFF22680F5C5002B1C85 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE82680F5C5002B1C85 /* Ingredient+CoreDataProperties.swift */; };
-		EFC5AFF32680F5C5002B1C85 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFE92680F5C5002B1C85 /* Recipe+CoreDataClass.swift */; };
-		EFC5AFF42680F5C5002B1C85 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFEA2680F5C5002B1C85 /* Recipe+CoreDataProperties.swift */; };
+		EFC5AFFF2680FF7A002B1C85 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFF52680FF7A002B1C85 /* Ingredient+CoreDataClass.swift */; };
+		EFC5B0002680FF7A002B1C85 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFF62680FF7A002B1C85 /* Ingredient+CoreDataProperties.swift */; };
+		EFC5B0012680FF7A002B1C85 /* Process+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFF72680FF7A002B1C85 /* Process+CoreDataClass.swift */; };
+		EFC5B0022680FF7A002B1C85 /* Process+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFF82680FF7A002B1C85 /* Process+CoreDataProperties.swift */; };
+		EFC5B0032680FF7A002B1C85 /* FeedbackDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFF92680FF7A002B1C85 /* FeedbackDetail+CoreDataClass.swift */; };
+		EFC5B0042680FF7A002B1C85 /* FeedbackDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFFA2680FF7A002B1C85 /* FeedbackDetail+CoreDataProperties.swift */; };
+		EFC5B0052680FF7A002B1C85 /* Feedback+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFFB2680FF7A002B1C85 /* Feedback+CoreDataClass.swift */; };
+		EFC5B0062680FF7A002B1C85 /* Feedback+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFFC2680FF7A002B1C85 /* Feedback+CoreDataProperties.swift */; };
+		EFC5B0072680FF7A002B1C85 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFFD2680FF7A002B1C85 /* Recipe+CoreDataClass.swift */; };
+		EFC5B0082680FF7A002B1C85 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5AFFE2680FF7A002B1C85 /* Recipe+CoreDataProperties.swift */; };
 		F95CB1F726803FE80065B523 /* categoryPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1F626803FE80065B523 /* categoryPickerCell.swift */; };
 		F95CB1F9268040360065B523 /* servingPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1F8268040360065B523 /* servingPickerCell.swift */; };
 		F95CB1FB2680407B0065B523 /* detailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CB1FA2680407B0065B523 /* detailCell.swift */; };
@@ -105,16 +105,16 @@
 		ECBEAE06267A4DD300144217 /* FeedbackDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDetailTableViewCell.swift; sourceTree = "<group>"; };
 		ECBEAE07267A4DD300144217 /* FeedbackDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackDetailTableViewCell.xib; sourceTree = "<group>"; };
 		EFC5AF2F2680B584002B1C85 /* Ramenology_uikit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ramenology_uikit.xcdatamodel; sourceTree = "<group>"; };
-		EFC5AFE12680F5C5002B1C85 /* Process+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EFC5AFE22680F5C5002B1C85 /* Process+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EFC5AFE32680F5C5002B1C85 /* Feedback+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feedback+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EFC5AFE42680F5C5002B1C85 /* Feedback+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feedback+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EFC5AFE52680F5C5002B1C85 /* FeedbackDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedbackDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EFC5AFE62680F5C5002B1C85 /* FeedbackDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedbackDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EFC5AFE72680F5C5002B1C85 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EFC5AFE82680F5C5002B1C85 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EFC5AFE92680F5C5002B1C85 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EFC5AFEA2680F5C5002B1C85 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EFC5AFF52680FF7A002B1C85 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EFC5AFF62680FF7A002B1C85 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EFC5AFF72680FF7A002B1C85 /* Process+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EFC5AFF82680FF7A002B1C85 /* Process+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EFC5AFF92680FF7A002B1C85 /* FeedbackDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedbackDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EFC5AFFA2680FF7A002B1C85 /* FeedbackDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedbackDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EFC5AFFB2680FF7A002B1C85 /* Feedback+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feedback+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EFC5AFFC2680FF7A002B1C85 /* Feedback+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feedback+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EFC5AFFD2680FF7A002B1C85 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EFC5AFFE2680FF7A002B1C85 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F95CB1F626803FE80065B523 /* categoryPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryPickerCell.swift; sourceTree = "<group>"; };
 		F95CB1F8268040360065B523 /* servingPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = servingPickerCell.swift; sourceTree = "<group>"; };
 		F95CB1FA2680407B0065B523 /* detailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailCell.swift; sourceTree = "<group>"; };
@@ -170,16 +170,16 @@
 		C6F7D7C32676FA1900AF0DE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EFC5AFE12680F5C5002B1C85 /* Process+CoreDataClass.swift */,
-				EFC5AFE22680F5C5002B1C85 /* Process+CoreDataProperties.swift */,
-				EFC5AFE32680F5C5002B1C85 /* Feedback+CoreDataClass.swift */,
-				EFC5AFE42680F5C5002B1C85 /* Feedback+CoreDataProperties.swift */,
-				EFC5AFE52680F5C5002B1C85 /* FeedbackDetail+CoreDataClass.swift */,
-				EFC5AFE62680F5C5002B1C85 /* FeedbackDetail+CoreDataProperties.swift */,
-				EFC5AFE72680F5C5002B1C85 /* Ingredient+CoreDataClass.swift */,
-				EFC5AFE82680F5C5002B1C85 /* Ingredient+CoreDataProperties.swift */,
-				EFC5AFE92680F5C5002B1C85 /* Recipe+CoreDataClass.swift */,
-				EFC5AFEA2680F5C5002B1C85 /* Recipe+CoreDataProperties.swift */,
+				EFC5AFF52680FF7A002B1C85 /* Ingredient+CoreDataClass.swift */,
+				EFC5AFF62680FF7A002B1C85 /* Ingredient+CoreDataProperties.swift */,
+				EFC5AFF72680FF7A002B1C85 /* Process+CoreDataClass.swift */,
+				EFC5AFF82680FF7A002B1C85 /* Process+CoreDataProperties.swift */,
+				EFC5AFF92680FF7A002B1C85 /* FeedbackDetail+CoreDataClass.swift */,
+				EFC5AFFA2680FF7A002B1C85 /* FeedbackDetail+CoreDataProperties.swift */,
+				EFC5AFFB2680FF7A002B1C85 /* Feedback+CoreDataClass.swift */,
+				EFC5AFFC2680FF7A002B1C85 /* Feedback+CoreDataProperties.swift */,
+				EFC5AFFD2680FF7A002B1C85 /* Recipe+CoreDataClass.swift */,
+				EFC5AFFE2680FF7A002B1C85 /* Recipe+CoreDataProperties.swift */,
 				C6406C5626784AE5004CDD65 /* Ramen.swift */,
 				C6406C652678F1ED004CDD65 /* Tag.swift */,
 				C652A670267DCB1800857884 /* Feedback.swift */,
@@ -377,40 +377,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6406C642678B1F1004CDD65 /* TagsCollectionViewCell.swift in Sources */,
+				EFC5B0012680FF7A002B1C85 /* Process+CoreDataClass.swift in Sources */,
 				C6406C5E267881DE004CDD65 /* UIColor+Style.swift in Sources */,
 				C6F7D7C52676FD9600AF0DE2 /* StartController.swift in Sources */,
+				EFC5B0022680FF7A002B1C85 /* Process+CoreDataProperties.swift in Sources */,
+				EFC5B0082680FF7A002B1C85 /* Recipe+CoreDataProperties.swift in Sources */,
 				F95CB1FE268040D80065B523 /* ingProcTable.swift in Sources */,
+				EFC5B0062680FF7A002B1C85 /* Feedback+CoreDataProperties.swift in Sources */,
 				ECBEAD902678566E00144217 /* ImageTableViewCell.swift in Sources */,
-				EFC5AFF42680F5C5002B1C85 /* Recipe+CoreDataProperties.swift in Sources */,
 				ECACE62D2680A8A500D33B8E /* TextTableViewCell.swift in Sources */,
 				C652A673267DCB3600857884 /* Ingredient.swift in Sources */,
 				C652A671267DCB1800857884 /* Feedback.swift in Sources */,
 				ECBEAE08267A4DD300144217 /* FeedbackDetailTableViewCell.swift in Sources */,
 				EC78203D267C4D0F00960C42 /* SubmitButtonTableViewCell.swift in Sources */,
-				EFC5AFEC2680F5C5002B1C85 /* Process+CoreDataProperties.swift in Sources */,
-				EFC5AFED2680F5C5002B1C85 /* Feedback+CoreDataClass.swift in Sources */,
-				EFC5AFEF2680F5C5002B1C85 /* FeedbackDetail+CoreDataClass.swift in Sources */,
-				EFC5AFEE2680F5C5002B1C85 /* Feedback+CoreDataProperties.swift in Sources */,
+				EFC5B0032680FF7A002B1C85 /* FeedbackDetail+CoreDataClass.swift in Sources */,
 				ECBEAD582676F45500144217 /* AppDelegate.swift in Sources */,
 				ECBEAE04267A48DA00144217 /* FeedbackDetailViewController.swift in Sources */,
+				EFC5AFFF2680FF7A002B1C85 /* Ingredient+CoreDataClass.swift in Sources */,
 				ECBEADAF2678EB9200144217 /* EmptyStateTableViewCell.swift in Sources */,
 				F95CB1F726803FE80065B523 /* categoryPickerCell.swift in Sources */,
 				EC413AA3267AEA5C001FCC94 /* InputFeedbackTableViewCell.swift in Sources */,
 				ECBEAD792676FC1500144217 /* RamenDetailViewController.swift in Sources */,
 				EC5A0F20267BA27E00DD8FB7 /* FeedbackCollectionViewCell.swift in Sources */,
+				EFC5B0002680FF7A002B1C85 /* Ingredient+CoreDataProperties.swift in Sources */,
 				F95CB1F9268040360065B523 /* servingPickerCell.swift in Sources */,
 				F95CB1FB2680407B0065B523 /* detailCell.swift in Sources */,
 				EFC5AF302680B584002B1C85 /* Ramenology_uikit.xcdatamodeld in Sources */,
+				EFC5B0072680FF7A002B1C85 /* Recipe+CoreDataClass.swift in Sources */,
 				ECBEAD5A2676F45500144217 /* SceneDelegate.swift in Sources */,
-				EFC5AFEB2680F5C5002B1C85 /* Process+CoreDataClass.swift in Sources */,
-				EFC5AFF32680F5C5002B1C85 /* Recipe+CoreDataClass.swift in Sources */,
 				C6406C662678F1ED004CDD65 /* Tag.swift in Sources */,
 				C6F7D7C82677131200AF0DE2 /* UIView+Extended.swift in Sources */,
 				EC413AB0267AF238001FCC94 /* InputFeedbackViewController.swift in Sources */,
-				EFC5AFF02680F5C5002B1C85 /* FeedbackDetail+CoreDataProperties.swift in Sources */,
+				EFC5B0042680FF7A002B1C85 /* FeedbackDetail+CoreDataProperties.swift in Sources */,
+				EFC5B0052680FF7A002B1C85 /* Feedback+CoreDataClass.swift in Sources */,
 				F95CB200268041030065B523 /* cookingPickerCell.swift in Sources */,
-				EFC5AFF12680F5C5002B1C85 /* Ingredient+CoreDataClass.swift in Sources */,
-				EFC5AFF22680F5C5002B1C85 /* Ingredient+CoreDataProperties.swift in Sources */,
 				C638A6F5267848D2009386B0 /* CardViewCell.swift in Sources */,
 				F9EB70B4267DC83E001D252F /* AddRecipeViewController.swift in Sources */,
 				C6406C5726784AE5004CDD65 /* Ramen.swift in Sources */,

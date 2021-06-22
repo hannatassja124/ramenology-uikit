@@ -24,8 +24,8 @@ extension Recipe {
     @NSManaged public var recipe_source_url: String?
     @NSManaged public var recipe_total_serving: Int32
     @NSManaged public var feedbacks: NSSet?
-    @NSManaged public var processes: NSSet?
     @NSManaged public var ingredients: NSSet?
+    @NSManaged public var processes: NSSet?
 
 }
 
@@ -46,23 +46,6 @@ extension Recipe {
 
 }
 
-// MARK: Generated accessors for processes
-extension Recipe {
-
-    @objc(addProcessesObject:)
-    @NSManaged public func addToProcesses(_ value: Process)
-
-    @objc(removeProcessesObject:)
-    @NSManaged public func removeFromProcesses(_ value: Process)
-
-    @objc(addProcesses:)
-    @NSManaged public func addToProcesses(_ values: NSSet)
-
-    @objc(removeProcesses:)
-    @NSManaged public func removeFromProcesses(_ values: NSSet)
-
-}
-
 // MARK: Generated accessors for ingredients
 extension Recipe {
 
@@ -77,6 +60,23 @@ extension Recipe {
 
     @objc(removeIngredients:)
     @NSManaged public func removeFromIngredients(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for processes
+extension Recipe {
+
+    @objc(addProcessesObject:)
+    @NSManaged public func addToProcesses(_ value: Process)
+
+    @objc(removeProcessesObject:)
+    @NSManaged public func removeFromProcesses(_ value: Process)
+
+    @objc(addProcesses:)
+    @NSManaged public func addToProcesses(_ values: NSSet)
+
+    @objc(removeProcesses:)
+    @NSManaged public func removeFromProcesses(_ values: NSSet)
 
 }
 

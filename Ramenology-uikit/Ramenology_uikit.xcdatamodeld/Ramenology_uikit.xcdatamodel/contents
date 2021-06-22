@@ -4,7 +4,7 @@
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="feedback_category_type" optional="YES" attributeType="String"/>
         <attribute name="feedback_name" optional="YES" attributeType="String"/>
-        <relationship name="feedback_details" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FeedbackDetail" inverseName="feedback" inverseEntity="FeedbackDetail"/>
+        <relationship name="feedback_details" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FeedbackDetail" inverseName="feedback" inverseEntity="FeedbackDetail"/>
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="feedbacks" inverseEntity="Recipe"/>
     </entity>
     <entity name="FeedbackDetail" representedClassName="FeedbackDetail" syncable="YES">
@@ -35,7 +35,7 @@
         <relationship name="processes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Process" inverseName="recipe" inverseEntity="Process"/>
     </entity>
     <elements>
-        <element name="Feedback" positionX="941.581298828125" positionY="-7295.021545410156" width="128" height="118"/>
+        <element name="Feedback" positionX="941.581298828125" positionY="-7295.021545410156" width="128" height="104"/>
         <element name="FeedbackDetail" positionX="1004.581298828125" positionY="-7187.021545410156" width="128" height="103"/>
         <element name="Ingredient" positionX="977.581298828125" positionY="-7259.021545410156" width="128" height="73"/>
         <element name="Process" positionX="995.581298828125" positionY="-7241.021545410156" width="128" height="88"/>
