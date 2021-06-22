@@ -17,7 +17,7 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
     // Data for the table
     var tags: [Tag] = []
     var cards: [Recipe] = []
-    var selectedRamen: Ramen?
+    var selectedRamen: Recipe?
     
     // Reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -41,10 +41,13 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
             
             // Set the filtering on the request
             let tempTag = tags.trimmingCharacters(in: .whitespacesAndNewlines)
-            if tempTag != "" {
-                let predicate = NSPredicate(format: "category = %@", tags)
-                request.predicate = predicate
-            }
+//            if tempTag != "" || tempTag != tag_enum.all.rawValue {
+                let filter = NSPredicate(format: "%K = %@", "category", tags)
+                request.predicate = filter
+//            }
+            
+            print(tags)
+            print(tempTag)
             
             self.cards = try context.fetch(request)
             
@@ -54,6 +57,8 @@ class StartController: UIViewController, cardProtocols, tagsProtocols {
         } catch {
             
         }
+        
+        self.cardTableView.reloadData()
     }
     
     func initAddButton() {
